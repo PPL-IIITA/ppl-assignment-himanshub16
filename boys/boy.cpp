@@ -12,9 +12,9 @@ Boy::Boy(std::string name, BoyType type, int attr, int intel, int budget, int mi
     this->min_attr_req = min_attr_req;
 }
 
-int Boy::getHappiness()
+float Boy::getHappiness()
 {
-    int happiness;
+    float happiness;
     switch (this->type) {
     case miser:
         happiness = this->budget;

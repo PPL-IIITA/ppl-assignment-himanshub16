@@ -34,7 +34,7 @@ public:
     void makeCouple(Girl *girl);
     void setGiftBasket(std::vector <Gift> *gifts);
     bool isCompatible(Girl *girl);
-    int getHappiness();
+    float getHappiness();
 }
 
 #endif
