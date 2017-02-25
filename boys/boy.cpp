@@ -1,11 +1,13 @@
-#ifndef BOY_H
 #include "boy.h"
-#endif
 
-Boy::Boy(std::string name, BoyType type, int attr, int intel, int budget, int min_attr_req)
+Boy::Boy()
+{
+}
+
+Boy::Boy(std::string name, BoyNature type, int attr, int intel, int budget, int min_attr_req)
 {
     this->name         = name;
-    this->type         = type;
+    this->nature       = type;
     this->intel        = intel;
     this->attr         = attr;
     this->budget       = budget;
@@ -15,7 +17,7 @@ Boy::Boy(std::string name, BoyType type, int attr, int intel, int budget, int mi
 float Boy::getHappiness()
 {
     float happiness;
-    switch (this->type) {
+    switch (this->nature) {
     case miser:
         happiness = this->budget;
         for (std::vector<Gift>::iterator it = gifts->begin();

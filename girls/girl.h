@@ -1,27 +1,21 @@
 #ifndef GIRL_H
 #define GIRL_H
 
-#ifndef GIFT_H
-#include "../gifts/gift.h"
-#endif
-
-#ifndef BOY_H
+#include "girl_type.h"
 #include "../boys/boy.h"
-#endif
+#include "../gifts/gift.h"
 
 #include <iostream>
 #include <vector>
 
-enum GirlNature {
-    choosy,
-    normal,
-    desperate
-};
+/* forward declaration */
+class Boy;
+class Gift;
 
 class Girl
 {
 private:
-    std::vector <Gift> *gifts;
+    std::vector<Gift> *gifts;
 public:
     bool isCommitted;
     std::string name;
@@ -32,6 +26,7 @@ public:
     BoyNature boy_type;
     Boy *boyfriend;
 
+    Girl();
     Girl(std::string name, int attr, int intel, int budget, GirlNature nature, BoyNature boy_type);
     void makeCouple(Boy *boy);
     void setGiftBasket(std::vector <Gift> *gifts);

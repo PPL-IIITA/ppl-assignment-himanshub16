@@ -1,8 +1,11 @@
-#ifndef GIRL_H
 #include "girl.h"
-#endif
 
 #include <cmath>
+
+Girl::Girl()
+{
+
+}
 
 Girl::Girl(std::string name, int attr, int intel, int budget, GirlNature nature, BoyNature boy_type)
 {
