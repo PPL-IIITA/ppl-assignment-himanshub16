@@ -1,4 +1,6 @@
 TAGS
+log.txt
+*/log.txt
 */a.out
 */*.o
 *.o
