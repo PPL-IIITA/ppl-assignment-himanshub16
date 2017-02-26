@@ -37,7 +37,7 @@ void Logger::log(const std::string type, const std::string msg, bool print)
 
     if (print) {
         std::cout << this->tmpstr << " | ";
-        std::cout << " -- " << type << msg << std::endl;
+        std::cout << type << " -- " << msg << std::endl;
     }
 }
 
