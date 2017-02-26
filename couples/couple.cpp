@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <iostream>
 #include <algorithm>
 
 #include "couple.h"
@@ -32,7 +33,7 @@ float Couple::findHappiness()
     return boyHapp + girlHapp;
 }
 
-void Couple::makeGiftBasket(std::vector<Gift> giftsList)
+void Couple::makeGiftBasket(std::vector<Gift> giftsList, Logger *logger)
 {
     if (giftsList.empty()) return;
 
@@ -63,12 +64,15 @@ void Couple::makeGiftBasket(std::vector<Gift> giftsList)
         expenseLimit -= (*it).price;
         this->gifts.push_back(*it);
         (*it).gifted = true;
+        logger->log("Gift", this->boy.name+" gifted "+(*it).name + " to "+ this->girl.name, true);
     }
 
     /* if no gifts have been given, then raise the budget of the boy */
     if (gifts.empty()) {
         this->boy.budget = expenseLimit = gifts[0].price;
         this->gifts.push_back(gifts[0]);
+        logger->log("Budget", this->boy.name+ " raised his budget to "+ std::to_string(this->boy.budget), true);
+        logger->log("Gift", this->boy.name+" gifted "+ gifts[0].name + " to "+ this->girl.name, true);
     }
 
     /* geek boys want to give a luxury gift */
@@ -77,6 +81,7 @@ void Couple::makeGiftBasket(std::vector<Gift> giftsList)
         std::remove_if(giftsList.begin(), giftsList.end(), giftRemovalPred);
         if (! giftsList.empty())
             this->gifts.push_back(giftsList[0]);
+        logger->log("Luxury", this->boy.name+" gifted luxury gift "+ gifts[0].name + " to "+ this->girl.name, true);
     }
 
     this->boy.setGiftBasket(&this->gifts);

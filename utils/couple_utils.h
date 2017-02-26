@@ -10,7 +10,7 @@
  * Returns the vector of couples formed
  */
 std::vector<Couple> makeCouples (std::vector<Boy> *boys,
-                                 std::vector<Girl> *girls)
+                                 std::vector<Girl> *girls, Logger *logger)
 {
     std::vector<Couple> couples;
 
@@ -34,12 +34,14 @@ std::vector<Couple> makeCouples (std::vector<Boy> *boys,
         /* Find an appropriate boy */
         for (j = 0; j < (int)(*boys).size(); j++) {
             if ((*boys)[j].committed) continue;
+            logger->log("Match", "Checking compatibility of "+(*boys)[j].name+" and "+(*girls)[i].name, false);
             if ((*boys)[j].isCompatible( (*girls)[i] ) &&
                 (*girls)[i].isCompatible( (*boys)[j] ) ) {
 
                 couples.push_back( Couple((*boys)[j], (*girls)[i]) );
                 (*boys)[j].committed = true;
                 (*girls)[i].committed = true;
+                logger->log("Committed", (*boys)[j].name+" and "+(*girls)[i].name + " committed", false);
                 break;
             }
         }

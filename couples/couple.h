@@ -4,6 +4,7 @@
 #include "../boys/boy.h"
 #include "../girls/girl.h"
 #include "../gifts/gift.h"
+#include "../utils/logger/logger.h"
 
 /* Couple class */
 class Couple
@@ -19,7 +20,7 @@ public:
     float findCompatibility();  /* Find the compatibility of this couple */
 
     /* Form the gift basket (vector) for this couple from given gift list */
-    void makeGiftBasket(std::vector<Gift> gifts);
+    void makeGiftBasket(std::vector<Gift> gifts, Logger *logger);
 };
 
 
