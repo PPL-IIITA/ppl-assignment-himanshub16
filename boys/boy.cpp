@@ -75,12 +75,8 @@ void Boy::makeCouple(Girl *girl)
 
 bool Boy::isCompatible(Girl girl)
 {
-    // if (girl->attr >= this->min_attr_req &&
-    //     girl->budget <= this->budget)
-    // if (girl->budget <= this->budget)
-    //     return true;
-    // return false;
-    return (girl.budget <= this->budget);
+    return ( (girl.attr >= this->min_attr_req) &&
+             (girl.budget <= this->budget) );
 }
 
 void Boy::setGiftBasket(std::vector<Gift> gifts)

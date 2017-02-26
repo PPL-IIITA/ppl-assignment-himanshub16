@@ -55,11 +55,7 @@ float Girl::getHappiness()
 
 bool Girl::isCompatible(Boy boy)
 {
-    // if (boy->budget >= this->budget &&
-    //     boy->nature == this->boy_type)
-    if (boy.budget >= this->budget)
-        return true;
-    return false;
+    return (boy.budget >= this->budget);
 }
 
 void Girl::makeCouple(Boy *boy)
