@@ -19,7 +19,7 @@ Boy::Boy()
 {
     this->committed = false;
     this->girlfriend = NULL;
-    this->gifts->empty();
+    this->gifts->erase();
     this->happiness = 0;
 }
 
@@ -34,7 +34,7 @@ Boy::Boy(std::string name, BoyNature type, int attr, int intel, int budget, int 
     this->committed    = false;
     this->happiness    = 0;
     this->girlfriend   = NULL;
-    this->gifts->empty();
+    this->gifts->erase();
 }
 
 float Boy::getHappiness()
