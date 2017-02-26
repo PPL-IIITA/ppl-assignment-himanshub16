@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$dc/d36/read__data_8h.html#a6fbaea86b53f97c3226c3374fd844530" title="readAllBoys" alt="" coords="109,5,205,32"/>
+<area shape="rect" id="node3" href="$dc/d36/read__data_8h.html#a7f49f980a4df66133bdac7b31b74cf59" title="readAllGirls" alt="" coords="111,56,204,83"/>
+<area shape="rect" id="node4" href="$dc/d36/read__data_8h.html#a6c049b5bf54e9c3db7b91a7a77f7068a" title="readAllGifts" alt="" coords="111,107,203,133"/>
+<area shape="rect" id="node5" href="$d3/d42/class_logger.html#a33012114be492f6f29e8d4e625d50b42" title="Logger::info" alt="" coords="110,157,205,184"/>
+<area shape="rect" id="node6" href="$d3/d42/class_logger.html#a8edce552783b0272d7bb9ab4d2497de9" title="Logger::log" alt="" coords="301,208,393,235"/>
+<area shape="rect" id="node7" href="$da/dfa/couple__utils_8h.html#af3485f88e36d86155f98cd924ee88811" title="makeCouples" alt="" coords="104,259,211,285"/>
+<area shape="rect" id="node8" href="$d2/d9e/boy_8cpp.html#a16f395e310de368a481f930a40798659" title="compareOnAttractiveness" alt="" coords="259,259,435,285"/>
+<area shape="rect" id="node9" href="$d2/d9e/boy_8cpp.html#a156c37f957c03c3e4cb0e534cf8d4e0f" title="compareOnRichness" alt="" coords="273,309,420,336"/>
+<area shape="rect" id="node10" href="$d2/d9e/boy_8cpp.html#ad3f912fbb3eada4a0291eb52cb381291" title="compareOnIntelligence" alt="" coords="267,360,427,387"/>
+</map>
