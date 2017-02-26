@@ -8,9 +8,12 @@
 #include "../boys/boy.h"
 #include "../gifts/gift.h"
 
-std::vector<Boy> readAllBoys(char *filename)
+/* Read all boys from filename (CSV)
+ * Return the vector of boys
+ */
+std::vector<Boy> readAllBoys(std::string filename)
 {
-    io::CSVReader<6> in(filename);
+    io::CSVReader<6> in(filename.c_str());
     in.read_header(io::ignore_extra_column,
                    "name",
                    "attractiveness",
@@ -36,9 +39,12 @@ std::vector<Boy> readAllBoys(char *filename)
     return boys;
 }
 
-std::vector<Girl> readAllGirls(char *filename)
+/* Read all girls from filename (CSV)
+ *Return the vector of Girls
+ */
+std::vector<Girl> readAllGirls(std::string filename)
 {
-    io::CSVReader<6> in(filename);
+    io::CSVReader<6> in(filename.c_str());
     in.read_header(io::ignore_extra_column,
                    "name",
                    "attractiveness",
@@ -60,14 +66,17 @@ std::vector<Girl> readAllGirls(char *filename)
                              budget,
                              static_cast<GirlNature>(nature),
                              static_cast<BoyType>(boy_nature)
-                        ));
+                            ));
     }
     return girls;
 }
 
-std::vector<Gift> readAllGifts(char *filename)
+/* Read all Gifts from filename (CSV)
+ * Returns the vector of Gifts
+ */
+std::vector<Gift> readAllGifts(std::string filename)
 {
-    io::CSVReader<4> in(filename);
+    io::CSVReader<4> in(filename.c_str());
     in.read_header(io::ignore_extra_column,
                    "name",
                    "type",
@@ -81,10 +90,10 @@ std::vector<Gift> readAllGifts(char *filename)
     int type, price, value;
 
     while (in.read_row(name, type, price, value)) {
-            gifts.push_back(Gift(name,
-                                 static_cast<GiftType>(type),
-                                 price,
-                                 value));
+        gifts.push_back(Gift(name,
+                             static_cast<GiftType>(type),
+                             price,
+                             value));
     }
     return gifts;
 }
