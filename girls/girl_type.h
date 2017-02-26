@@ -7,5 +7,11 @@ enum GirlNature {
     desperate
 };
 
+enum BoyType {
+    attractive,
+    rich,
+    intelligent
+};
+
 
 #endif
