@@ -7,6 +7,7 @@
 * [Development Environment](#development-environment)
 * [Build instructions](#build-instructions)
 * [Class diagram](#class-diagram)
+
 ---
 ### Development Environment
 | Compiler | g++ (Debian 6.3.0-6) |
@@ -33,5 +34,5 @@ make q2
 ```
 ---
 
-### Class diagrams
+### Class diagram
 * Class diagrams are available with [documentation](https://ppl-iiita.github.io/ppl-assignment-himanshub16).
