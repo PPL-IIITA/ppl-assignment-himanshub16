@@ -42,7 +42,7 @@ int main(int argc, char **argv)
   CSVCreator girls("girls.csv", "girl", girls_attr, girls_attr_min_values, girls_attr_max_values);
   girls.generate(n_girls);
 
-  CSVCreator boys("boys.csv", "boys", boys_attr, boys_attr_min_values, boys_attr_max_values);
+  CSVCreator boys("boys.csv", "boy", boys_attr, boys_attr_min_values, boys_attr_max_values);
   boys.generate(n_boys);
 
   CSVCreator gifts("gifts.csv", "gift", gifts_attr, gifts_attr_min_values, gifts_attr_max_values);
