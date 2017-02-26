@@ -1,11 +1,13 @@
 #include "girl.h"
 
 #include <cmath>
+#define BASE 1.1
 
 Girl::Girl()
 {
     this->committed = false;
     this->boyfriend = NULL;
+    this->gifts     = NULL;
     this->happiness = 0;
 }
 
@@ -19,12 +21,15 @@ Girl::Girl(std::string name, int attr, int intel, int budget, GirlNature nature,
     this->boy_type    = boy_type;
     this->committed   = false;
     this->boyfriend   = NULL;
+    this->gifts       = NULL;
     this->happiness   = 0;
 }
 
 float Girl::getHappiness()
 {
     float happiness = 0;
+    if (!this->gifts)
+        return -1;
 
     for (std::vector<Gift> ::iterator it = gifts->begin();
          it != gifts->end();
@@ -32,7 +37,7 @@ float Girl::getHappiness()
 
         switch (this->nature) {
         case choosy:
-            happiness += log(it->price);
+            happiness += log10(it->price);
             if (it->type == luxury)
                 happiness += it->value*2;
             break;
@@ -42,7 +47,7 @@ float Girl::getHappiness()
             break;
 
         case desperate:
-            happiness += exp(it->price);
+            happiness += pow(BASE, it->price);
             break;
 
         default:
