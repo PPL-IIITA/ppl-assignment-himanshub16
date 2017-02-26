@@ -17,7 +17,7 @@
 | Architecture | amd64 |
 | Documentation generator | Doxygen |
 | Text Editor | Emacs |
-| Coding Style | 4 spaces |
+| Indent Style | 4 spaces |
 
 ---
 ### Build instructions
@@ -35,4 +35,4 @@ make q2
 ---
 
 ### Class diagram
-* Class diagrams are available with [documentation](https://ppl-iiita.github.io/ppl-assignment-himanshub16).
+* Class diagrams are available in [documentation](https://ppl-iiita.github.io/ppl-assignment-himanshub16).
