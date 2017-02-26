@@ -4,15 +4,24 @@
 #ifndef LOGGER_H
 #define LOGGER_H
 
+/* Class for logger */
 class Logger
 {
 private:
-    time_t rawtime;
-    std::string tmpstr;
-    std::fstream file;
+    time_t rawtime;     /* Helper variable for time manipulation */
+    std::string tmpstr; /* Helper variable for string manipulation */
+    std::fstream file;  /* File stream to the log file */
 public:
-    Logger (char *filename);
-    void log(const char *type, const char* msg);
+    /* Constructor with filename of log file as parameter */
+    Logger (const std::string filename);
+
+    /* Method to log single line statements */
+    void info (const std::string msg);
+
+    /* Method to log with type and detailed message */
+    void log(const std::string type, const std::string msg);
+
+    /* Destructor which closes file on invokation */
     ~Logger();
 };
 

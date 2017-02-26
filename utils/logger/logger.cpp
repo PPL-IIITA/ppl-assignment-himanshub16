@@ -5,17 +5,22 @@
 #include "logger.h"
 #endif
 
-Logger::Logger(char *filename)
+Logger::Logger(const std::string filename)
 {
     if (this->file.is_open())
         this->file.close();
-    this->file.open(filename, std::ios::out | std::ios::app);
+    this->file.open(filename.c_str(), std::ios::out | std::ios::app);
     if (this->file.fail()) {
         throw std::runtime_error ("Failed to open log file.\n");
     }
 }
 
-void Logger::log(const char *type, const char* msg)
+void Logger::info(const std::string msg)
+{
+    this->file << msg << std::endl;
+}
+
+void Logger::log(const std::string type, const std::string msg)
 {
     time(&rawtime);
     this->tmpstr = ctime(&rawtime);
