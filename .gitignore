@@ -1,5 +1,8 @@
 TAGS
 */a.out
+*/*.o
+*.o
+*/*/*.o
 */*/a.out
 utils/tests-generator/*.csv
 */#.*
