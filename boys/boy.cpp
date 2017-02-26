@@ -17,10 +17,10 @@ bool compareOnRichness (Boy b1, Boy b2)
 
 Boy::Boy()
 {
-    this->committed = false;
+    this->committed  = false;
     this->girlfriend = NULL;
-    this->gifts->erase();
-    this->happiness = 0;
+    this->gifts      = NULL;
+    this->happiness  = 0;
 }
 
 Boy::Boy(std::string name, BoyNature type, int attr, int intel, int budget, int min_attr_req)
@@ -34,14 +34,16 @@ Boy::Boy(std::string name, BoyNature type, int attr, int intel, int budget, int 
     this->committed    = false;
     this->happiness    = 0;
     this->girlfriend   = NULL;
-    this->gifts->erase();
+    this->gifts        = NULL;
 }
 
 float Boy::getHappiness()
 {
     float happiness = 0;
 
-    if (!this->committed || !this->girlfriend)
+    if (!this->committed ||
+        !this->girlfriend ||
+        !this->gifts)
         return -1;
 
     switch (this->nature) {
