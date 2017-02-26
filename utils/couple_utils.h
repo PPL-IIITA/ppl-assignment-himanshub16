@@ -6,7 +6,7 @@
 
 #include "logger/logger.h"
 
-/* Form couples from given list of boys and girls
+/** Form couples from given list of boys and girls \n
  * Returns the vector of couples formed
  */
 std::vector<Couple> makeCouples (std::vector<Boy> *boys,
@@ -50,7 +50,7 @@ std::vector<Couple> makeCouples (std::vector<Boy> *boys,
     return couples;
 }
 
-/* Find the list of k happiest couples from given list of couples
+/** Find the list of k happiest couples from given list of couples \n
  * Returns the vector of happiest couples in descending order
  */
 std::vector<Couple> getKHappiestCouples (std::vector<Couple> couples, int k)
@@ -60,7 +60,7 @@ std::vector<Couple> getKHappiestCouples (std::vector<Couple> couples, int k)
     return happyCouples;
 }
 
-/* Find the list of k most compatible couples from given list of couples
+/** Find the list of k most compatible couples from given list of couples \n
  * Returns the vector of compatible couples in descending order
  */
 std::vector<Couple> getKCompatibleCouples (std::vector<Couple> couples, int k)
