@@ -15,9 +15,9 @@ int main(int argc, char **argv)
     girls_attr.push_back("intelligence");
     girls_attr.push_back("budget");
     girls_attr.push_back("nature");
-    girls_attr.push_back("boy_choice");
+    girls_attr.push_back("boy_choice" );
   std::vector<int> girls_attr_min_values ({0, 0, 0, 0, 0});
-  std::vector<int> girls_attr_max_values ({100, 100, 1000, 3, 3});
+  std::vector<int> girls_attr_max_values ({100, 100, 1000, 2, 2});
 
   int n_boys = atoi(argv[2]);
   std::vector<std::string> boys_attr;
@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     boys_attr.push_back("nature");
     boys_attr.push_back("min_attr_req");
   std::vector<int> boys_attr_min_values ({0, 0, 0, 0, 0});
-  std::vector<int> boys_attr_max_values ({100, 100, 1000, 100, 3});
+  std::vector<int> boys_attr_max_values ({100, 100, 1000, 2, 100});
 
   int n_gifts = atoi(argv[3]);
   std::vector<std::string> gifts_attr;

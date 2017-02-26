@@ -38,8 +38,8 @@ void CSVCreator::generate(int n)
 
   /* write data */
   for (i = 0; i < n; i++) {
-    file << this->type << i << ',';
-    for (j = 1; j < this->fields; j++)
+      file << this->type << '-' <<  i << ',';
+    for (j = 0; j < this->fields-1; j++)
       file << get_random_int(this->min_value[j], this->max_value[j]) << ',';
     file << std::endl;
   }
