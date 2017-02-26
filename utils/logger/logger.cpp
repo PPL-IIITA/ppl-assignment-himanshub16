@@ -15,12 +15,16 @@ Logger::Logger(const std::string filename)
     }
 }
 
-void Logger::info(const std::string msg)
+void Logger::info(const std::string msg, bool print)
 {
     this->file << msg << std::endl;
+
+    if (print) {
+        std::cout << msg << std::endl;
+    }
 }
 
-void Logger::log(const std::string type, const std::string msg)
+void Logger::log(const std::string type, const std::string msg, bool print)
 {
     time(&rawtime);
     this->tmpstr = ctime(&rawtime);
@@ -30,11 +34,15 @@ void Logger::log(const std::string type, const std::string msg)
     this->file << std::left << type << " -- ";
     this->file.width(0);
     this->file << msg << std::endl;
+
+    if (print) {
+        std::cout << this->tmpstr << " | ";
+        std::cout << " -- " << type << msg << std::endl;
+    }
 }
 
 Logger::~Logger()
 {
     if (this->file.is_open())
         this->file.close();
-    std::cout << "log ends";
 }
