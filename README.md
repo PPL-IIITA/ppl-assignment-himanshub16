@@ -3,18 +3,20 @@
 
 ---
 
-* [Documentation](https://somelin)
-* [Development Environment](#development-enironment)
+* [Documentation](https://ppl-iiita.github.io/ppl-assignment-himanshub16/)
+* [Development Environment](#development-environment)
 * [Build instructions](#build-instructions)
 
 ---
 ### Development Environment
-Operating system        | Linux  <br>
-Distribution            | Debian Stretch  <br>
-Architecture            | amd64  <br>
-Compiler                | g++ (Debian 6.3.0-6)  <br>
-Documentation generator | Doxygen  <br>
-Text Editor             | Emacs  <br>
+| Compiler | g++ (Debian 6.3.0-6) |
+| --- | --- |
+| Operating system | Linux |
+| Distribution | Debian Stretch |
+| Architecture | amd64 |
+| Documentation generator | Doxygen |
+| Text Editor | Emacs |
+| Coding Style | 4 spaces |
 
 ---
 ### Build instructions
