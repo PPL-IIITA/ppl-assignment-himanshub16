@@ -19,7 +19,7 @@ Boy::Boy()
 {
     this->committed = false;
     this->girlfriend = NULL;
-    this->gifts.empty();
+    this->gifts->empty();
     this->happiness = 0;
 }
 
@@ -34,7 +34,7 @@ Boy::Boy(std::string name, BoyNature type, int attr, int intel, int budget, int 
     this->committed    = false;
     this->happiness    = 0;
     this->girlfriend   = NULL;
-    this->gifts.empty();
+    this->gifts->empty();
 }
 
 float Boy::getHappiness()
@@ -47,8 +47,8 @@ float Boy::getHappiness()
     switch (this->nature) {
     case miser:
         happiness = this->budget;
-        for (std::vector<Gift>::iterator it = gifts.begin();
-             it != gifts.end();
+        for (std::vector<Gift>::iterator it = this->gifts->begin();
+             it != this->gifts->end();
              it++)
             happiness -= it->price;
         break;
@@ -79,7 +79,7 @@ bool Boy::isCompatible(Girl girl)
              (girl.budget <= this->budget) );
 }
 
-void Boy::setGiftBasket(std::vector<Gift> gifts)
+void Boy::setGiftBasket(std::vector<Gift> *gifts)
 {
     this->gifts = gifts;
 }

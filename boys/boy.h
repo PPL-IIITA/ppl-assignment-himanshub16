@@ -15,7 +15,7 @@ class Gift;
 class Boy
 {
 private:
-    std::vector<Gift> gifts;
+    std::vector<Gift> *gifts;
 public:
     std::string name;
     int attr;
@@ -32,7 +32,7 @@ public:
     Boy(std::string name, BoyNature type, int attr, int intel, int budget, int min_attr_req);
 
     void makeCouple(Girl *girl);
-    void setGiftBasket(std::vector<Gift> gifts);
+    void setGiftBasket(std::vector<Gift> *gifts);
     bool isCompatible(Girl girl);
     float getHappiness();
 };

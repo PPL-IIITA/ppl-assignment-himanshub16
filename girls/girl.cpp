@@ -26,8 +26,8 @@ float Girl::getHappiness()
 {
     float happiness = 0;
 
-    for (std::vector<Gift> ::iterator it = gifts.begin();
-         it != gifts.end();
+    for (std::vector<Gift> ::iterator it = gifts->begin();
+         it != gifts->end();
          it++) {
 
         switch (this->nature) {
@@ -63,7 +63,7 @@ void Girl::makeCouple(Boy *boy)
     this->boyfriend = boy;
 }
 
-void Girl::setGiftBasket(std::vector<Gift> gifts)
+void Girl::setGiftBasket(std::vector<Gift> *gifts)
 {
     this->gifts = gifts;
 }
