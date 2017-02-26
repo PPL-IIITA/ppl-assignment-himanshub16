@@ -15,23 +15,24 @@ class Gift;
 class Girl
 {
 private:
-    std::vector<Gift> *gifts;
+    std::vector<Gift> gifts;
 public:
-    bool isCommitted;
+    bool committed;
     std::string name;
     int attr;
     int intel;
     int budget;
+    float happiness;
     GirlNature nature;
-    BoyNature boy_type;
+    BoyType boy_type;
     Boy *boyfriend;
 
     Girl();
-    Girl(std::string name, int attr, int intel, int budget, GirlNature nature, BoyNature boy_type);
+    Girl(std::string name, int attr, int intel, int budget, GirlNature nature, BoyType boy_type);
     void makeCouple(Boy *boy);
-    void setGiftBasket(std::vector <Gift> *gifts);
+    void setGiftBasket(std::vector <Gift> gifts);
     float getHappiness();
-    bool isCompatible(Boy *boy);
+    bool isCompatible(Boy boy);
 };
 
 #endif

@@ -4,10 +4,12 @@
 
 Girl::Girl()
 {
-
+    this->committed = false;
+    this->boyfriend = NULL;
+    this->happiness = 0;
 }
 
-Girl::Girl(std::string name, int attr, int intel, int budget, GirlNature nature, BoyNature boy_type)
+Girl::Girl(std::string name, int attr, int intel, int budget, GirlNature nature, BoyType boy_type)
 {
     this->name        = name;
     this->attr        = attr;
@@ -15,14 +17,17 @@ Girl::Girl(std::string name, int attr, int intel, int budget, GirlNature nature,
     this->budget      = budget;
     this->nature      = nature;
     this->boy_type    = boy_type;
-    this->isCommitted = false;
+    this->committed   = false;
+    this->boyfriend   = NULL;
+    this->happiness   = 0;
 }
 
 float Girl::getHappiness()
 {
     float happiness = 0;
-    for (std::vector<Gift> ::iterator it = gifts->begin();
-         it != gifts->end();
+
+    for (std::vector<Gift> ::iterator it = gifts.begin();
+         it != gifts.end();
          it++) {
 
         switch (this->nature) {
@@ -44,13 +49,15 @@ float Girl::getHappiness()
             return -1;
         }
     }
-    return happiness;
+    this->happiness = happiness;
+    return this->happiness;
 }
 
-bool Girl::isCompatible(Boy *boy)
+bool Girl::isCompatible(Boy boy)
 {
-    if (boy->budget >= this->budget &&
-        boy->type == this->boy_type)
+    // if (boy->budget >= this->budget &&
+    //     boy->nature == this->boy_type)
+    if (boy.budget >= this->budget)
         return true;
     return false;
 }
@@ -60,7 +67,7 @@ void Girl::makeCouple(Boy *boy)
     this->boyfriend = boy;
 }
 
-void Girl::setGiftBasket(std::vector<Gift> *gifts)
+void Girl::setGiftBasket(std::vector<Gift> gifts)
 {
     this->gifts = gifts;
 }
