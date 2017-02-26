@@ -28,9 +28,14 @@ bool compareOnValue (Gift g1, Gift g2)
     return (g1.value > g2.value);
 }
 
-bool compareOnPrice (Gift g1, Gift g2)
+bool compareOnPriceAsc (Gift g1, Gift g2)
 {
-    return (g1.price > g2.value);
+    return (g1.price < g2.value);
+}
+
+bool compareOnPriceDesc (Gift g1, Gift g2)
+{
+    return (g1.price > g2.price);
 }
 
 #endif
