@@ -1,7 +1,4 @@
-#ifndef GIFT_H
 #include "gift.h"
-#endif
-
 
 bool compareOnValue (Gift g1, Gift g2)
 {

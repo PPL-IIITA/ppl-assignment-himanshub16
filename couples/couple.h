@@ -1,17 +1,9 @@
 #ifndef COUPLE_H
 #define COUPLE_H
 
-#ifndef BOY_H
 #include "../boys/boy.h"
-#endif
-
-#ifndef GIRL_H
 #include "../girls/girl.h"
-#endif
-
-#ifndef GIFT_H
 #include "../gifts/gift.h"
-#endif
 
 /* Couple class */
 class Couple
