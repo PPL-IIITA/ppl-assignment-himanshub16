@@ -15,12 +15,12 @@ Logger::Logger(char *filename)
     }
 }
 
-void Logger::log(char *type, char* msg)
+void Logger::log(const char *type, const char* msg)
 {
     time(&rawtime);
     this->tmpstr = ctime(&rawtime);
     this->tmpstr[this->tmpstr.size() - 1] = '\0';
-    this->file << this->tmpstr << ' ' << type << ' ' << msg << std::endl;
+    this->file << this->tmpstr << " | " << type << " -- " << msg << std::endl;
 }
 
 Logger::~Logger()

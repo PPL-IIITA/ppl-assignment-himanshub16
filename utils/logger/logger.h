@@ -12,7 +12,7 @@ private:
     std::fstream file;
 public:
     Logger (char *filename);
-    void log(char *type, char* msg);
+    void log(const char *type, const char* msg);
     ~Logger();
 };
 
