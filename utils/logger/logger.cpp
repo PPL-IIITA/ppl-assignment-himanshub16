@@ -20,7 +20,11 @@ void Logger::log(const char *type, const char* msg)
     time(&rawtime);
     this->tmpstr = ctime(&rawtime);
     this->tmpstr[this->tmpstr.size() - 1] = '\0';
-    this->file << this->tmpstr << " | " << type << " -- " << msg << std::endl;
+    this->file << this->tmpstr << " | ";
+    this->file.width(10);
+    this->file << std::left << type << " -- ";
+    this->file.width(0);
+    this->file << msg << std::endl;
 }
 
 Logger::~Logger()
