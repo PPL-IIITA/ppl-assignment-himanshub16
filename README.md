@@ -32,6 +32,7 @@ make q1
 make q2
 ./result
 ```
+Logs are available in **log.txt**
 ---
 
 ### Class diagram
