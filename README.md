@@ -32,6 +32,18 @@ make q1
 make q2
 ./result
 ```
+
+**To generate csv datasets**
+```
+make csv
+./generate
+```
+
+**To cleanup all the mess**
+```
+make clean
+```
+
 Logs are available in **log.txt**
 ---
 
