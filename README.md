@@ -30,13 +30,13 @@ make q1
 **To execute Question 2**
 ```
 make q2
-./result
+./result [k]
 ```
 
 **To generate csv datasets**
 ```
 make csv
-./generate
+./generate [girls] [boys] [gifts]
 ```
 
 **To cleanup all the mess**
