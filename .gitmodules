@@ -1,3 +1,0 @@
-[submodule "utils/csv-parser"]
-	path = utils/csv-parser
-	url = https://github.com/ben-strasser/fast-cpp-csv-parser
