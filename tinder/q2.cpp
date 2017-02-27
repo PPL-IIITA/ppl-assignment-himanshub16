@@ -10,7 +10,7 @@
 #include "../utils/couple_utils.h"
 #include "../utils/logger/logger.h"
 
-#include "configs.h"
+#include "../configs.h"
 
 
 int main(int argc, char **argv)
