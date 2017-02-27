@@ -21,6 +21,16 @@ q2:
 	@echo
 	@echo "Everything went find. Run ./result to check the result"
 
+csv:
+	cd tests-generator; make
+	mv tests-generator/generate .
+	@echo "Run ./generate to make csv files"
+
 clean:
-	@rm -f $(OBJECT_FILES) tinder/q1.o tinder/q2.o
+	cd tinder;        make clean
+	cd boys;          make clean
+	cd girls;         make clean
+	cd couples;       make clean
+	cd gifts;         make clean
+	cd utils/logger;  make clean
 	@echo "Cleanup done!"
