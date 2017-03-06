@@ -9,7 +9,7 @@ q1:
 	cd utils/logger;  make
 	g++ -Wall -std=c++11 $(OBJECT_FILES) tinder/q1.o -o result
 	@echo
-	@echo "Everything went find. Run ./result to check the result"
+	@echo "Everything went fine. Run ./result to check the result"
 
 q2:
 	cd tinder;        make q2
@@ -19,7 +19,7 @@ q2:
 	cd utils/logger;  make
 	g++ -Wall -std=c++11 $(OBJECT_FILES) tinder/q2.o -o result
 	@echo
-	@echo "Everything went find. Run ./result to check the result"
+	@echo "Everything went fine. Run ./result to check the result"
 
 csv:
 	cd tests-generator; make
