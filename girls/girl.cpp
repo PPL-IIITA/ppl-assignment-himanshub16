@@ -11,13 +11,12 @@ Girl::Girl()
     this->happiness = 0;
 }
 
-Girl::Girl(std::string name, int attr, int intel, int budget, GirlNature nature, BoyType boy_type)
+Girl::Girl(std::string name, int attr, int intel, int budget, BoyType boy_type)
 {
     this->name        = name;
     this->attr        = attr;
     this->intel       = intel;
     this->budget      = budget;
-    this->nature      = nature;
     this->boy_type    = boy_type;
     this->committed   = false;
     this->boyfriend   = NULL;
