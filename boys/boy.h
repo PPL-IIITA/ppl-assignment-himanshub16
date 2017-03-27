@@ -19,7 +19,7 @@ class Gift;
 class Boy
 {
 private:
-    std::vector<Gift> *gifts; /*!< Vector of gifts the boy has gifted */
+    static const BoyNature nature;  /*!< Nature of boy */
 public:
     std::string name;  /*!< Name of boy */
     int attr;          /*!< Attractiveness */
@@ -27,16 +27,16 @@ public:
     int budget;        /*!< Max money boy can spend */
     int min_attr_req;  /*!< Min attraction required from girl */
     float happiness;   /*!< Happiness of the boy */
-    BoyNature nature;  /*!< Nature of boy */
     Girl *girlfriend;  /*!< Reference of his girlfriend */
 
     bool committed;    /*!< If he is committed */
+    std::vector<Gift> *gifts;       /*!< Vector of gifts the boy has gifted */
 
     /** The default constructor */
     Boy();
 
     /** Parametrized constructor */
-    Boy(std::string name, BoyNature type, int attr, int intel, int budget, int min_attr_req);
+    Boy(std::string name, int attr, int intel, int budget, int min_attr_req);
 
     /** Make 'her' 'his' girlfriend */
     void makeCouple(Girl *girl);
@@ -48,7 +48,7 @@ public:
     bool isCompatible(Girl girl);
 
     /** Calculate happiness of the boy */
-    float getHappiness();
+    virtual float getHappiness();
 };
 
 

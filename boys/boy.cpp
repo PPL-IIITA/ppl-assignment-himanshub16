@@ -23,10 +23,9 @@ Boy::Boy()
     this->happiness  = 0;
 }
 
-Boy::Boy(std::string name, BoyNature type, int attr, int intel, int budget, int min_attr_req)
+Boy::Boy(std::string name, int attr, int intel, int budget, int min_attr_req)
 {
     this->name         = name;
-    this->nature       = type;
     this->intel        = intel;
     this->attr         = attr;
     this->budget       = budget;
@@ -35,39 +34,6 @@ Boy::Boy(std::string name, BoyNature type, int attr, int intel, int budget, int 
     this->happiness    = 0;
     this->girlfriend   = NULL;
     this->gifts        = NULL;
-}
-
-float Boy::getHappiness()
-{
-    float happiness = 0;
-
-    if (!this->committed ||
-        !this->girlfriend ||
-        !this->gifts)
-        return -1;
-
-    switch (this->nature) {
-    case miser:
-        happiness = this->budget;
-        for (std::vector<Gift>::iterator it = this->gifts->begin();
-             it != this->gifts->end();
-             it++)
-            happiness -= it->price;
-        break;
-
-    case generous:
-        happiness = this->girlfriend->getHappiness();
-        break;
-
-    case geek:
-        happiness = this->girlfriend->intel;
-        break;
-
-    default:
-        return -1;
-    }
-    this->happiness = happiness;
-    return happiness;
 }
 
 void Boy::makeCouple(Girl *girl)
