@@ -1,50 +1,50 @@
 #include "boy.h"
 
-bool compareOnIntelligence (Boy b1, Boy b2)
+bool compareOnIntelligence (Boy *b1, Boy *b2)
 {
-    return b1.intel > b2.intel;
+    return b1->intel > b2->intel;
 }
 
-bool compareOnAttractiveness (Boy b1, Boy b2)
+bool compareOnAttractiveness (Boy *b1, Boy *b2)
 {
-    return b1.attr > b2.attr;
+    return b1->attr > b2->attr;
 }
 
-bool compareOnRichness (Boy b1, Boy b2)
+bool compareOnRichness (Boy *b1, Boy *b2)
 {
-    return b1.budget > b2.budget;
+    return b1->budget > b2->budget;
 }
 
-Boy::Boy()
-{
-    this->committed  = false;
-    this->girlfriend = NULL;
-    this->gifts      = NULL;
-    this->happiness  = 0;
-}
+// Boy::Boy()
+// {
+//     this->committed  = false;
+//     this->girlfriend = NULL;
+//     this->gifts      = NULL;
+//     this->happiness  = 0;
+// }
 
-Boy::Boy(std::string name, int attr, int intel, int budget, int min_attr_req)
-{
-    this->name         = name;
-    this->intel        = intel;
-    this->attr         = attr;
-    this->budget       = budget;
-    this->min_attr_req = min_attr_req;
-    this->committed    = false;
-    this->happiness    = 0;
-    this->girlfriend   = NULL;
-    this->gifts        = NULL;
-}
+// Boy::Boy(std::string name, int attr, int intel, int budget, int min_attr_req)
+// {
+//     this->name         = name;
+//     this->intel        = intel;
+//     this->attr         = attr;
+//     this->budget       = budget;
+//     this->min_attr_req = min_attr_req;
+//     this->committed    = false;
+//     this->happiness    = 0;
+//     this->girlfriend   = NULL;
+//     this->gifts        = NULL;
+// }
 
 void Boy::makeCouple(Girl *girl)
 {
     this->girlfriend = girl;
 }
 
-bool Boy::isCompatible(Girl girl)
+bool Boy::isCompatible(Girl *girl)
 {
-    return ( (girl.attr >= this->min_attr_req) &&
-             (girl.budget <= this->budget) );
+    return ( (girl->attr >= this->min_attr_req) &&
+             (girl->budget <= this->budget) );
 }
 
 void Boy::setGiftBasket(std::vector<Gift> *gifts)

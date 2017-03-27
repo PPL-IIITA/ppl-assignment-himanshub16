@@ -19,7 +19,6 @@ class Gift;
 class Boy
 {
 private:
-    static const BoyNature nature;  /*!< Nature of boy */
 public:
     std::string name;  /*!< Name of boy */
     int attr;          /*!< Attractiveness */
@@ -32,11 +31,11 @@ public:
     bool committed;    /*!< If he is committed */
     std::vector<Gift> *gifts;       /*!< Vector of gifts the boy has gifted */
 
-    /** The default constructor */
-    Boy();
+    /* /\** The default constructor *\/ */
+    /* Boy(); */
 
-    /** Parametrized constructor */
-    Boy(std::string name, int attr, int intel, int budget, int min_attr_req);
+    /* /\** Parametrized constructor *\/ */
+    /* Boy(std::string name, int attr, int intel, int budget, int min_attr_req); */
 
     /** Make 'her' 'his' girlfriend */
     void makeCouple(Girl *girl);
@@ -45,27 +44,27 @@ public:
     void setGiftBasket(std::vector<Gift> *gifts);
 
     /** Check if the girl is compatible with the boy */
-    bool isCompatible(Girl girl);
+    bool isCompatible(Girl *girl);
 
     /** Calculate happiness of the boy */
-    virtual float getHappiness();
+    virtual float getHappiness() = 0;
 };
 
 
 /** Comparator for sorting on the basis of attractiveness \n
  * For sorting in descending order
  */
-bool compareOnAttractiveness (Boy b1, Boy b2);
+bool compareOnAttractiveness (Boy *b1, Boy *b2);
 
 /** Comparator for sorting on the basis of intelligence \n
  * For sorting in descending order
  */
-bool compareOnIntelligence   (Boy b1, Boy b2);
+bool compareOnIntelligence   (Boy *b1, Boy *b2);
 
 /** Comparator for sorting on the basis of richness \n
  * For sorting in descending order
  */
-bool compareOnRichness       (Boy b1, Boy b2);
+bool compareOnRichness       (Boy *b1, Boy *b2);
 
 
 #endif /* BOY_H */

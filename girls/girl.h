@@ -28,10 +28,10 @@ public:
     Boy *boyfriend;            /*!< Reference to her boyfriend */
 
     std::vector<Gift> *gifts;  /*!< The gifts girl has received */
-    Girl(); /*!< Default constructor */
+    /* Girl(); /\*!< Default constructor *\/ */
 
-    /** Parametrized constructor */
-    Girl(std::string name, int attr, int intel, int budget, BoyType boy_type);
+    /* /\** Parametrized constructor *\/ */
+    /* Girl(std::string name, int attr, int intel, int budget, BoyType boy_type); */
 
     /** Make 'him' 'her' boyfriend */
     void makeCouple(Boy *boy);
@@ -40,10 +40,10 @@ public:
     void setGiftBasket(std::vector <Gift> *gifts);
 
     /** Find the happiness of the girl */
-    virtual float getHappiness();
+    /* virtual float getHappiness() = 0; */
 
     /** Check if the girl is compatible with the boy */
-    bool isCompatible(Boy boy);
+    bool isCompatible(Boy *boy);
 };
 
-#endif
+#endif /* GIRL_H */
