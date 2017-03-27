@@ -1,4 +1,14 @@
-OBJECT_FILES := boys/boy.o girls/girl.o gifts/gift.o couples/couple.o utils/logger/logger.o
+OBJECT_FILES := gifts/gift.o couples/couple.o utils/logger/logger.o
+BOY_OBJECT_FILES := boys/generousboy.o boys/geekboy.o boys/miserboy.o
+GIRL_OBJECT_FILES := girls/choosygirl.o girls/desperategirl.o girls/normalgirl.o
+
+q3:
+	cd tinder;				make q3
+	cd boys;					make all
+	cd girls;					make all
+	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q3.o -o result
+	@echo
+	@echo "Everything went fine. Run ./result to check the result"
 
 q1:
 	cd tinder;        make q1
