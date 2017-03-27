@@ -4,14 +4,14 @@
 #define CSV_IO_NO_THREAD
 #include "csv-parser/csv.h"
 
-#include "../girls/girl.h"
-#include "../boys/boy.h"
+#include "../girls/allgirls.h"
+#include "../boys/allboys.h"
 #include "../gifts/gift.h"
 
 /* Read all boys from filename (CSV)
  * Return the vector of boys
  */
-std::vector<Boy> readAllBoys(std::string filename)
+std::vector<Boy*> readAllBoys(std::string filename)
 {
     io::CSVReader<6> in(filename.c_str());
     in.read_header(io::ignore_extra_column,
@@ -22,19 +22,24 @@ std::vector<Boy> readAllBoys(std::string filename)
                    "nature",
                    "min_attr_req");
 
-    std::vector<Boy> boys;
+    std::vector<Boy*> boys;
     boys.clear();
 
     std::string name;
     int attr, intel, budget, nature, min_attr;
 
     while (in.read_row(name, attr, intel, budget, nature, min_attr)) {
-        boys.push_back(Boy(name,
-                           static_cast<BoyNature>(nature),
-                           attr,
-                           intel,
-                           budget,
-                           min_attr));
+        switch(nature) {
+        case BoyNature::miser:
+            boys.push_back(new MiserBoy(name, attr, intel, budget, min_attr));
+            break;
+        case BoyNature::generous:
+            boys.push_back(new GenerousBoy(name, attr, intel, budget, min_attr));
+            break;
+        case BoyNature::geek:
+            boys.push_back(new GeekBoy(name, attr, intel, budget, min_attr));
+            break;
+        }
     }
     return boys;
 }
@@ -42,7 +47,7 @@ std::vector<Boy> readAllBoys(std::string filename)
 /* Read all girls from filename (CSV)
  *Return the vector of Girls
  */
-std::vector<Girl> readAllGirls(std::string filename)
+std::vector<Girl*> readAllGirls(std::string filename)
 {
     io::CSVReader<6> in(filename.c_str());
     in.read_header(io::ignore_extra_column,
@@ -53,20 +58,24 @@ std::vector<Girl> readAllGirls(std::string filename)
                    "nature",
                    "boy_choice");
 
-    std::vector<Girl> girls;
+    std::vector<Girl*> girls;
     girls.clear();
 
     std::string name;
     int attr, intel, budget, nature, boy_nature;
 
     while (in.read_row(name, attr, intel, budget, nature, boy_nature)) {
-        girls.push_back(Girl(name,
-                             attr,
-                             intel,
-                             budget,
-                             static_cast<GirlNature>(nature),
-                             static_cast<BoyType>(boy_nature)
-                            ));
+        switch (nature) {
+        case GirlNature::choosy:
+            girls.push_back(new ChoosyGirl(name, attr, intel, budget, static_cast<BoyType>(boy_nature)));
+            break;
+        case GirlNature::desperate:
+            girls.push_back(new DesperateGirl(name, attr, intel, budget, static_cast<BoyType>(boy_nature)));
+            break;
+        case GirlNature::normal:
+            girls.push_back(new NormalGirl(name, attr, intel, budget, static_cast<BoyType>(boy_nature)));
+            break;
+        }
     }
     return girls;
 }
@@ -97,6 +106,5 @@ std::vector<Gift> readAllGifts(std::string filename)
     }
     return gifts;
 }
-
 
 #endif
