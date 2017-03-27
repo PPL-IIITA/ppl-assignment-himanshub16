@@ -1,5 +1,5 @@
-#ifndef GIRL_TYPE
-#define GIRL_TYPE
+#ifndef GIRL_TYPE_H
+#define GIRL_TYPE_H
 
 /** enum for the nature of a girl */
 enum GirlNature {
@@ -15,5 +15,4 @@ enum BoyType {
     intelligent
 };
 
-
-#endif
+#endif /* GIRL_TYPE_H */
