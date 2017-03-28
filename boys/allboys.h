@@ -6,5 +6,7 @@
 #include "geekboy.h"
 #include "generousboy.h"
 #include "miserboy.h"
+#include "boy.h"
+#include "boy_type.h"
 
 #endif

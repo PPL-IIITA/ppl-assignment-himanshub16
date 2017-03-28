@@ -6,5 +6,7 @@
 #include "choosygirl.h"
 #include "normalgirl.h"
 #include "desperategirl.h"
+#include "girl.h"
+#include "girl_type.h"
 
 #endif /* ALLGIRLS_H */
