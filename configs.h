@@ -12,3 +12,6 @@
 
 /*!< The default value of k for ques. 2 */
 #define K 5
+
+/*!< The value of t for ques. 6 */
+const int T = 10;
