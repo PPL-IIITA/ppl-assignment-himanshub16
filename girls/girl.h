@@ -49,4 +49,9 @@ public:
     bool isCompatible(Boy *boy);
 };
 
+
+/** Comparator to compare girls based on maintenance cost
+ */
+bool compareOnMaintenanceCost(Girl *g1, Girl *g2);
+
 #endif /* GIRL_H */

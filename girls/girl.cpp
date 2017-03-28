@@ -3,6 +3,11 @@
 #include <cmath>
 #define BASE 1.1
 
+bool compareOnMaintenanceCost(Girl *g1, Girl *g2)
+{
+    return (g1->budget > g2->budget);
+}
+
 // Girl::Girl()
 // {
 //     this->committed = false;
