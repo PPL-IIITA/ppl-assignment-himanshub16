@@ -5,6 +5,7 @@
 #define BOY_H
 
 #include "boy_type.h"
+
 #include "../girls/girl.h"
 #include "../gifts/gift.h"
 
@@ -48,6 +49,9 @@ public:
 
     /** Calculate happiness of the boy */
     virtual float getHappiness() = 0;
+
+    /** Get nature of boy */
+    virtual BoyNature getNature() = 0;
 };
 
 

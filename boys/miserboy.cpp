@@ -26,3 +26,8 @@ float MiserBoy::getHappiness()
     this->happiness = happiness;
     return happiness;
 }
+
+BoyNature MiserBoy::getNature()
+{
+    return nature;
+}

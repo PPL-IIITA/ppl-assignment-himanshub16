@@ -23,3 +23,8 @@ float GeekBoy::getHappiness()
     this->happiness = happiness;
     return happiness;
 }
+
+BoyNature GeekBoy::getNature()
+{
+    return nature;
+}

@@ -16,7 +16,7 @@ class Gift;
 class Girl
 {
 private:
-    static const GirlNature nature;         /*!< Nature of girl */
+    /* static const GirlNature nature;         /\*!< Nature of girl *\/ */
 public:
     bool committed;            /*!< Whether she is committed */
     std::string name;          /*!< Name of the girl */
@@ -40,7 +40,10 @@ public:
     void setGiftBasket(std::vector <Gift> *gifts);
 
     /** Find the happiness of the girl */
-    /* virtual float getHappiness() = 0; */
+    virtual float getHappiness() = 0;
+
+    /** Get nature of the girl */
+    virtual GirlNature getNature() = 0;
 
     /** Check if the girl is compatible with the boy */
     bool isCompatible(Boy *boy);

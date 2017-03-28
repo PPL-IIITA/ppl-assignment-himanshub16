@@ -22,3 +22,8 @@ float GenerousBoy::getHappiness()
     this->happiness = happiness;
     return happiness;
 }
+
+BoyNature GenerousBoy::getNature()
+{
+    return nature;
+}

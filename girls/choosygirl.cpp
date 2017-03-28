@@ -32,3 +32,8 @@ float ChoosyGirl::getHappiness()
     this->happiness = happiness;
     return this->happiness;
 }
+
+GirlNature ChoosyGirl::getNature()
+{
+    return nature;
+}

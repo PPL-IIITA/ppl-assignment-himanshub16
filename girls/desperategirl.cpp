@@ -31,3 +31,8 @@ float DesperateGirl::getHappiness()
     this->happiness = happiness;
     return this->happiness;
 }
+
+GirlNature DesperateGirl::getNature()
+{
+    return nature;
+}

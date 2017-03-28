@@ -15,6 +15,22 @@ bool compareOnRichness (Boy *b1, Boy *b2)
     return b1->budget > b2->budget;
 }
 
+void Boy::makeCouple(Girl *girl)
+{
+    this->girlfriend = girl;
+}
+
+bool Boy::isCompatible(Girl *girl)
+{
+    return ( (girl->attr >= this->min_attr_req) &&
+             (girl->budget <= this->budget) );
+}
+
+void Boy::setGiftBasket(std::vector<Gift> *gifts)
+{
+    this->gifts = gifts;
+}
+
 // Boy::Boy()
 // {
 //     this->committed  = false;
@@ -35,19 +51,3 @@ bool compareOnRichness (Boy *b1, Boy *b2)
 //     this->girlfriend   = NULL;
 //     this->gifts        = NULL;
 // }
-
-void Boy::makeCouple(Girl *girl)
-{
-    this->girlfriend = girl;
-}
-
-bool Boy::isCompatible(Girl *girl)
-{
-    return ( (girl->attr >= this->min_attr_req) &&
-             (girl->budget <= this->budget) );
-}
-
-void Boy::setGiftBasket(std::vector<Gift> *gifts)
-{
-    this->gifts = gifts;
-}

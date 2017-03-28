@@ -9,7 +9,8 @@ private:
 public:
     /** Parametrized constructor */
     DesperateGirl(std::string name, int attr, int intel, int budget, BoyType boy_type);
-    float getHappiness();
+    float getHappiness() override;
+    GirlNature getNature() override;
 };
 
 #endif /* DESPERATEGIRL_H */

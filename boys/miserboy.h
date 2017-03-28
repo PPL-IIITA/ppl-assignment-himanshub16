@@ -11,6 +11,7 @@ public:
     MiserBoy(std::string name, int attr, int intel, int budget, int min_attr_req);
     /** Calculate happiness of the boy */
     float getHappiness() override;
+    BoyNature getNature() override;
 };
 
 #endif /* MISERBOY_H */

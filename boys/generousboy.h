@@ -12,6 +12,7 @@ public:
     GenerousBoy(std::string name, int attr, int intel, int budget, int min_attr_req);
     /** Calculate happiness of the boy */
     float getHappiness() override;
+    BoyNature getNature() override;
 };
 
 #endif /* GENEROUSBOY_H */

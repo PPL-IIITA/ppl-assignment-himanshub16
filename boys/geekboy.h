@@ -10,6 +10,7 @@ private:
 public:
     GeekBoy(std::string name, int attr, int intel, int budget, int min_attr_req);
     float getHappiness() override;
+    BoyNature getNature() override;
 };
 
 #endif /* GEEKBOY_H */
