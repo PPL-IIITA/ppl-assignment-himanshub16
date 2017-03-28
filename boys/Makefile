@@ -1,3 +1,6 @@
+boy:
+	g++ -std=c++11 -Wall -c boy.cpp -o boy.o
+
 miserboy:
 	g++ -std=c++11 -Wall -c miserboy.cpp -o miserboy.o
 
@@ -7,7 +10,7 @@ geekboy:
 generousboy:
 	g++ -std=c++11 -Wall -c generousboy.cpp -o generousboy.o
 
-all: miserboy geekboy generousboy
+all: boy miserboy geekboy generousboy
 
 clean:
-	@rm -f miserboy.o geekboy.o generousboy.o
+	@rm -f boy.o miserboy.o geekboy.o generousboy.o
