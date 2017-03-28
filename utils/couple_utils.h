@@ -79,3 +79,72 @@ std::vector<Couple> getKCompatibleCouples (std::vector<Couple> couples, int k)
     std::vector<Couple> happyCouples (couples.begin(), couples.begin() + k);
     return happyCouples;
 }
+
+/** Find the list of k unhappiest couples from given list of couples \n
+ * Returns the vector of happiest couples in descending order
+ */
+std::vector<Couple> getKUnhappiestCouples (std::vector<Couple> couples, int k)
+{
+    std::sort(couples.rbegin(), couples.rend(), compareOnHappiness);
+    std::vector<Couple> unhappyCouples (couples.begin(), couples.begin() + k);
+    return unhappyCouples;
+}
+
+
+/** Perform breakup of given couples and assign the girls new boyfriends
+ *  Solver for @question 4
+ */
+void performBreakupAndPairAgain (std::vector<Couple>happyCouples,
+                                 std::vector<Couple> *couples,
+                                 std::vector<Boy*> *boys,
+                                 std::vector<Girl*> *girls,
+                                 Logger *logger)
+{
+    std::vector<Couple> newCouples;
+    newCouples.clear();
+    for (std::vector<Couple>::iterator it = happyCouples.begin(); it != happyCouples.end(); it++) {
+        auto girl = it->girl;
+        auto boy = it->boy;
+        it->breakup();
+        /* Sort the boys as required */
+        switch (girl->boy_type) {
+        case attractive:
+            std::sort(boys->begin(), boys->end(), compareOnAttractiveness);
+            break;
+        case rich:
+            std::sort(boys->begin(), boys->end(), compareOnRichness);
+            break;
+        case intelligent:
+            std::sort(boys->begin(), boys->end(), compareOnIntelligence);
+            break;
+        }
+
+        /* Find an appropriate boy */
+        for (int j = 0; j < (int)boys->size(); j++) {
+            if ((*boys)[j]->committed ||
+                (*boys)[j]->name == boy->name)
+                continue;
+            logger->log("Match", "Checking compatibility of "+(*boys)[j]->name+" and "+(*boys)[j]->name, false);
+            if ((*boys)[j]->isCompatible( girl ) &&
+                girl->isCompatible( (*boys)[j] ) ) {
+
+                newCouples.push_back( Couple((*boys)[j], girl) );
+                (*boys)[j]->committed = true;
+                girl->committed = true;
+                logger->log("Committed", (*boys)[j]->name+" and "+girl->name + " committed", false);
+                break;
+            }
+        }
+    }
+
+    auto newCouplesItr = newCouples.begin();
+    for (auto it = happyCouples.begin(); it != happyCouples.end(); it++) {
+        for (auto jt = couples->begin(); jt != couples->end() && newCouplesItr != newCouples.end(); jt++) {
+            if (it->boy->name == jt->boy->name) {
+                couples->erase(jt);
+                couples->push_back(*newCouplesItr);
+                newCouplesItr++;
+            }
+        }
+    }
+}
