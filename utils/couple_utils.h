@@ -52,6 +52,14 @@ std::vector<Couple> makeCouples (std::vector<Boy*> boys,
     return couples;
 }
 
+/** Perform gifting for all these couples
+ */
+void performGifting (std::vector<Couple> *couples, std::vector<Gift> *giftlist, Logger *logger)
+{
+    for (auto it = couples->begin(); it != couples->end(); it++)
+        it->makeGiftBasket(*giftlist, logger);
+}
+
 /** Find the list of k happiest couples from given list of couples \n
  * Returns the vector of happiest couples in descending order
  */
