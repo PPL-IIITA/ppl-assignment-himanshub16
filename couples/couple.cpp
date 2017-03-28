@@ -34,6 +34,14 @@ float Couple::findHappiness()
     return boyHapp + girlHapp;
 }
 
+void Couple::breakup()
+{
+    boy->committed = false;
+    girl->committed = false;
+    boy->makeCouple(NULL);
+    girl->makeCouple(NULL);
+}
+
 void Couple::makeGiftBasket(std::vector<Gift> giftsList, Logger *logger)
 {
     if (giftsList.empty()) return;
@@ -42,7 +50,7 @@ void Couple::makeGiftBasket(std::vector<Gift> giftsList, Logger *logger)
 
     /* This is the maximum money to be spent.
        It is different for different types of boys.
-     */
+    */
     int expenseLimit = 0;
 
     switch (boy->getNature()) {

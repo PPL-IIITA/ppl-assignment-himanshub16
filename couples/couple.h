@@ -18,6 +18,7 @@ public:
     Couple(Boy *b, Girl *g);    /*!< Constructor */
     float findHappiness();      /*!< Find the happiness of this couple */
     float findCompatibility();  /*!< Find the compatibility of this couple */
+    void breakup();             /*!< Breakup this couple */
 
     /** Form the gift basket (vector) for this couple from given gift list */
     void makeGiftBasket(std::vector<Gift> giftlist, Logger *logger);
