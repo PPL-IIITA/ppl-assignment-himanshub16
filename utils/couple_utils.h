@@ -52,6 +52,78 @@ std::vector<Couple> makeCouples (std::vector<Boy*> boys,
     return couples;
 }
 
+/** Form couples from given list of boys and girls \n
+ * Returns the vector of couples formed
+ */
+std::vector<Couple> makeCouplesAlternatively (std::vector<Boy*> boys,
+                                 std::vector<Girl*> girls, Logger *logger)
+{
+    std::sort(girls.begin(), girls.end(), compareOnMaintenanceCost);
+    std::sort(boys.begin(), boys.end(), compareOnAttractiveness);
+    std::vector<Girl*> girlsCopy = girls;
+    std::vector<Boy*>  boysCopy  = boys;
+    std::vector<Couple> couples;
+
+    int  i, j;
+    for (i = 0; i < (int)girls.size(); i++) {
+        if (girls[i]->committed) continue;
+        std::sort(boysCopy.begin(), boysCopy.end(), compareOnAttractiveness);
+
+        if (i % 2 == 0) {
+
+            /* Sort the boys as required */
+            switch (girls[i]->boy_type) {
+            case attractive:
+                std::sort(boysCopy.begin(), boysCopy.end(), compareOnAttractiveness);
+                break;
+            case rich:
+                std::sort(boysCopy.begin(), boysCopy.end(), compareOnRichness);
+                break;
+            case intelligent:
+                std::sort(boysCopy.begin(), boysCopy.end(), compareOnIntelligence);
+                break;
+            }
+
+            /* Find an appropriate boy */
+            for (j = 0; j < (int)boysCopy.size(); j++) {
+                if (boysCopy[j]->committed) continue;
+                logger->log("Match", "Checking compatibility of "+boysCopy[j]->name+" and "+girls[i]->name, false);
+                if (boysCopy[j]->isCompatible( girls[i] ) &&
+                    girls[i]->isCompatible( boys[j] ) ) {
+
+                    couples.push_back( Couple((boysCopy)[j], girls[i]) );
+                    boysCopy[j]->committed = true;
+                    girls[i]->committed = true;
+                    logger->log("Committed", boysCopy[j]->name+" and "+girls[i]->name + " committed", false);
+                    break;
+                }
+            }
+
+        } else {
+
+            /* find first single boy */
+            Boy *singleBoy = boys[0];
+            for (int i = 0; i < (int)boys.size() && boys[i]->committed; i++)
+                singleBoy = boys[i];
+
+            /* Sort the girls with attractiveness */
+            std::sort(girlsCopy.begin(), girlsCopy.end(), compareOnMaintenanceCost);
+
+            for (auto it = girlsCopy.begin(); it != girlsCopy.end(); it++) {
+                if ((*it)->committed) continue;
+                couples.push_back( Couple(singleBoy, *it) );
+                singleBoy->committed = true;
+                (*it)->committed = true;
+                logger->log("Committed", singleBoy->name+" and "+(*it)->name+" committed", false);
+                break;
+            }
+
+        }
+    }
+
+    return couples;
+}
+
 /** Perform gifting for all these couples
  */
 void performGifting (std::vector<Couple> *couples, std::vector<Gift> *giftlist, Logger *logger)

@@ -20,6 +20,12 @@ makelibs:
 	cd couples;				make
 	cd utils/logger;	make
 
+q5: makelibs
+	cd tinder;				make q5
+	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q5.o -o result
+	@echo
+	@echo "Everything went fine. Run ./result to check the result"
+
 q4: makelibs
 	cd tinder;				make q4
 	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q4.o -o result
