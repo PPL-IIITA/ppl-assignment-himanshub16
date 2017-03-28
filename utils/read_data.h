@@ -45,7 +45,7 @@ std::vector<Boy*> readAllBoys(std::string filename)
 }
 
 /* Read all girls from filename (CSV)
- *Return the vector of Girls
+ * Return the vector of Girls
  */
 std::vector<Girl*> readAllGirls(std::string filename)
 {
