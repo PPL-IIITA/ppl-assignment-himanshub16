@@ -8,9 +8,9 @@ BOY_OBJECT_FILES := boys/boy.o \
 										boys/miserboy.o
 
 GIRL_OBJECT_FILES := girls/girl.o \
-										 girls/choosygirl.o \
-										 girls/desperategirl.o \
-									 	 girls/normalgirl.o
+										girls/choosygirl.o \
+										girls/desperategirl.o \
+										girls/normalgirl.o
 
 
 makelibs:
@@ -20,8 +20,14 @@ makelibs:
 	cd couples;				make
 	cd utils/logger;	make
 
+q4: makelibs
+	cd tinder;				make q4
+	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q4.o -o result
+	@echo
+	@echo "Everything went fine. Run ./result to check the result"
+
 q3: makelibs
-		cd tinder;				make q3
+	cd tinder;				make q3
 	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q3.o -o result
 	@echo
 	@echo "Everything went fine. Run ./result to check the result"
