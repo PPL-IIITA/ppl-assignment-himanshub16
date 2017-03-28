@@ -83,8 +83,8 @@ void Couple::makeGiftBasket(std::vector<Gift> giftsList, Logger *logger)
         logger->log("Luxury", boy->name+" gifted luxury gift "+ gifts[0].name + " to "+ girl->name, true);
     }
 
-    boy->gifts = &this->gifts;
-    girl->gifts = &this->gifts;
+    boy->setGiftBasket(&gifts);
+    girl->setGiftBasket(&gifts);
 }
 
 float Couple::findCompatibility()
