@@ -1,5 +1,5 @@
-/* allocate boyfriends to all girls in same order as given in input
- */
+/** q5 : allot boys and girls alternatively
+*/
 
 #include "../boys/allboys.h"
 #include "../girls/allgirls.h"
@@ -22,12 +22,12 @@ int main(int argc, char **argv)
     std::vector<Girl*> girls = readAllGirls(GIRL_FILE);
     std::vector<Gift> gifts = readAllGifts(GIFT_FILE);
 
-    logger.info("Processing for question 3", true);
+    logger.info("Processing for question 5", true);
     logger.log("boys", std::to_string(boys.size()) + " record read", true);
     logger.log("girls", std::to_string(girls.size()) + " record read", true);
     logger.log("gifts", std::to_string(gifts.size()) + " record read", true);
 
-    std::vector<Couple> couples = makeCouples(boys, girls, &logger);
+    std::vector<Couple> couples = makeCouplesAlternatively(boys, girls, &logger);
 
     logger.log("couples", std::to_string(couples.size()) + " formed", true);
 
@@ -49,10 +49,5 @@ int main(int argc, char **argv)
         logger.log("couple"+std::to_string(i+1),
                    hc[i].boy->name+" and "+hc[i].girl->name, true);
 
-    std::vector<Couple> cc = getKCompatibleCouples(couples, k);
-    logger.info(std::to_string(k) + " most compatible couples", true);
-    for (int i = 0; i < (int)cc.size(); i++)
-        logger.log("couple"+std::to_string(i+1),
-                   cc[i].boy->name+" and "+cc[i].girl->name, true);
     return 0;
 }

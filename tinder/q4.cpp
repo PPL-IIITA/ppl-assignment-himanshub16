@@ -1,4 +1,5 @@
-/* allocate boyfriends to all girls in same order as given in input
+/* perform breakup of k unhappiest couples, and assign the
+   girls who became single, another (new) boyfriend
  */
 
 #include "../boys/allboys.h"
@@ -22,7 +23,7 @@ int main(int argc, char **argv)
     std::vector<Girl*> girls = readAllGirls(GIRL_FILE);
     std::vector<Gift> gifts = readAllGifts(GIFT_FILE);
 
-    logger.info("Processing for question 3", true);
+    logger.info("Processing for question 4", true);
     logger.log("boys", std::to_string(boys.size()) + " record read", true);
     logger.log("girls", std::to_string(girls.size()) + " record read", true);
     logger.log("gifts", std::to_string(gifts.size()) + " record read", true);
@@ -43,16 +44,13 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    std::vector<Couple> hc = getKHappiestCouples(couples, k);
-    logger.info(std::to_string(k)+ " happiest Couples list", true);
+    std::vector<Couple> hc = getKUnhappiestCouples(couples, k);
+    logger.info(std::to_string(k)+ " unhappiest Couples list", true);
     for (int i = 0; i < (int)hc.size(); i++)
         logger.log("couple"+std::to_string(i+1),
                    hc[i].boy->name+" and "+hc[i].girl->name, true);
 
-    std::vector<Couple> cc = getKCompatibleCouples(couples, k);
-    logger.info(std::to_string(k) + " most compatible couples", true);
-    for (int i = 0; i < (int)cc.size(); i++)
-        logger.log("couple"+std::to_string(i+1),
-                   cc[i].boy->name+" and "+cc[i].girl->name, true);
+    logger.info("Performing breakup of k unhappiest couples and assign the girls new boyfriends", true);
+    performBreakupAndPairAgain(hc, &couples, &boys, &girls, &logger);
     return 0;
 }
