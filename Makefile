@@ -1,35 +1,37 @@
-OBJECT_FILES := gifts/gift.o couples/couple.o utils/logger/logger.o
-BOY_OBJECT_FILES := boys/generousboy.o boys/geekboy.o boys/miserboy.o
-GIRL_OBJECT_FILES := girls/choosygirl.o girls/desperategirl.o girls/normalgirl.o
+OBJECT_FILES := gifts/gift.o \
+								couples/couple.o \
+								utils/logger/logger.o
 
-q3:
-	cd tinder;				make q3
+BOY_OBJECT_FILES := boys/boy.o \
+										boys/generousboy.o \
+										boys/geekboy.o \
+										boys/miserboy.o
+
+GIRL_OBJECT_FILES := girls/girl.o \
+										 girls/choosygirl.o \
+										 girls/desperategirl.o \
+									 	 girls/normalgirl.o
+
+
+makelibs:
 	cd boys;					make all
 	cd girls;					make all
+	cd gifts;					make
+	cd couples;				make
+	cd utils/logger;	make
+
+q3: makelibs
+		cd tinder;				make q3
 	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q3.o -o result
 	@echo
 	@echo "Everything went fine. Run ./result to check the result"
 
 q1:
-	cd tinder;        make q1
-	cd boys;          make
-	cd girls;         make
-	cd couples;       make
-	cd gifts;         make
-	cd utils/logger;  make
-	g++ -Wall -std=c++11 $(OBJECT_FILES) tinder/q1.o -o result
 	@echo
-	@echo "Everything went fine. Run ./result to check the result"
+	@echo "Question 1 and 2 are not available due to new classes."
+	@echo "Please checkout 'first-submission' branch for them."
 
-q2:
-	cd tinder;        make q2
-	cd boys;          make
-	cd girls;         make
-	cd couples;       make
-	cd utils/logger;  make
-	g++ -Wall -std=c++11 $(OBJECT_FILES) tinder/q2.o -o result
-	@echo
-	@echo "Everything went fine. Run ./result to check the result"
+q2: q1
 
 csv:
 	cd tests-generator; make
