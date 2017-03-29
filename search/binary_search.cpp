@@ -2,7 +2,7 @@
 #include <algorithm>
 
 
-Boy* binarySearch (std::vector<Boy*> boys, int start, int end, std::string name)
+Boy* BinarySearch::binarySearch (std::vector<Boy*> boys, int start, int end, std::string name)
 {
     if (start == end)
         return NULL;
@@ -37,6 +37,8 @@ void BinarySearch::findGirlfriends (std::vector<std::string> namelist, Logger *l
             } else {
                 logger->log("q7:single", name+" is single", true);
             }
+        } else {
+            logger->log("not found", name, true);
         }
     }
 }

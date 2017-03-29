@@ -26,6 +26,8 @@ void ArraySearch::findGirlfriends (std::vector<std::string> namelist, Logger *lo
             } else {
                 logger->log("q7:single", name+" is single", true);
             }
+        } else {
+            logger->log("not found", name, true);
         }
     }
 }
