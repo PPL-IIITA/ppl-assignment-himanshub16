@@ -16,6 +16,9 @@ q5:
 q6:
 	g++ -Wall -std=c++11 -c q6.cpp -o q6.o
 
+q7:
+	g++ -Wall -std=c++11 -c q7.cpp -o q7.o
+
 clean:
 	@rm -f q1.o
 	@rm -f q2.o

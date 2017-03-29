@@ -12,6 +12,9 @@ GIRL_OBJECT_FILES := girls/girl.o \
 										girls/desperategirl.o \
 										girls/normalgirl.o
 
+SEARCH_OBJECT_FILES := search/binary_search.o \
+											 search/array_search.o \
+											 search/hash_search.o
 
 makelibs:
 	cd boys;					make all
@@ -19,6 +22,13 @@ makelibs:
 	cd gifts;					make
 	cd couples;				make
 	cd utils/logger;	make
+
+q7: makelibs
+	cd tinder;				make q7
+	cd search; 				make all
+	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) $(SEARCH_OBJECT_FILES) tinder/q7.o -o result
+	@echo
+	@echo "Everything went fine. Run ./result to check the result"
 
 q6: makelibs
 	cd tinder;				make q6
@@ -63,4 +73,5 @@ clean:
 	cd couples;       make clean
 	cd gifts;         make clean
 	cd utils/logger;  make clean
+	cd search;				make clean
 	@echo "Cleanup done!"
