@@ -24,7 +24,9 @@ Couple::Couple(Boy *b, Girl *g)
     boy = b;
     girl = g;
     boy->committed = true;
+    boy->makeCouple(girl);
     girl->committed = true;
+    girl->makeCouple(boy);
 }
 
 float Couple::findHappiness()
