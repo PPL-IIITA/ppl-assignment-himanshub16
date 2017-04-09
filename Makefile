@@ -23,7 +23,13 @@ makelibs:
 	cd couples;				make
 	cd utils/logger;	make
 
-q8: makelibs
+q9: makelibs
+	cd tinder;				make q9
+	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q9.o -o result
+	@echo
+	@echo "Everything went fine. Run ./result to check the result"
+
+q8: makelib
 	cd tinder;				make q8
 	g++ -Wall -std=c++11 $(OBJECT_FILES) $(BOY_OBJECT_FILES) $(GIRL_OBJECT_FILES) tinder/q8.o -o result
 	@echo
