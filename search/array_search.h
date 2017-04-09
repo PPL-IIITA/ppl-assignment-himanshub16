@@ -5,7 +5,7 @@
 
 class ArraySearch : public Search {
 private:
-    Boy* linearSearch (std::vector<Boy*> boyslist, std::string name);
+    Boy* linearSearch (std::string name);
 public:
     ArraySearch(std::vector<Boy*> boylist);
     void findGirlfriends (std::vector<std::string> namelist, Logger *logger) override;
