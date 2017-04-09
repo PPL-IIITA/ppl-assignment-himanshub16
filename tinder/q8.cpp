@@ -1,5 +1,5 @@
-/* perform breakup of k unhappiest couples, and assign the
-   girls who became single, another (new) boyfriend
+/* make couples, and perform gifting
+   Here, we have two gifting mechanisms, with option to choose any of them
  */
 
 #include "../boys/allboys.h"
