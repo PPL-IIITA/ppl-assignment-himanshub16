@@ -1,4 +1,5 @@
-/* allocate boyfriends to all girls using KBest template : question 9
+/* solver for ques 10
+ * make couples and perform gifting using randomK
  */
 
 #include "../boys/allboys.h"
@@ -8,6 +9,7 @@
 #include "../utils/read_data.h"
 #include "../utils/logger/logger.h"
 #include "../templates/kbest.h"
+#include "../templates/randomK.h"
 #include "../configs.h"
 
 std::vector<Couple> makeCouples(int k, std::vector<Boy*>, std::vector<Girl*>, Logger *logger);
@@ -48,7 +50,8 @@ std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*
     std::vector<Couple> couples;
     couples.clear();
 
-    for (auto girl : girls) {
+    for (int j = 0; j < girls.size(); j++) {
+        auto girl = RandomK<Girl*>(girls).getRandomElem();
         if (girl->committed) continue;
 
         std::vector<Boy*> topBoys;
@@ -64,7 +67,8 @@ std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*
             break;
         }
 
-        for (auto boy : boys) {
+        for (int i = 0; i < topBoys.size(); i++) {
+            auto boy = RandomK<Boy*>(topBoys).getRandomElem();
             if (boy->committed) continue;
             if (boy->isCompatible(girl) &&
                 girl->isCompatible(boy)) {
