@@ -132,6 +132,15 @@ void performGifting (std::vector<Couple> *couples, std::vector<Gift> *giftlist, 
         it->makeGiftBasket(*giftlist, logger);
 }
 
+/** Perform gifting for all these couples : second algorithm
+ * Solver for ques 8
+ */
+void performGifting2 (std::vector<Couple> *couples, std::vector<Gift> *giftlist, Logger *logger)
+{
+    for (auto it = couples->begin(); it != couples->end(); it++)
+        it->makeGiftBasket2(*giftlist, logger);
+}
+
 /** Find the list of k happiest couples from given list of couples \n
  * Returns the vector of happiest couples in descending order
  */

@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
+#include <string>
 
 #include "couple.h"
 
@@ -91,6 +92,69 @@ void Couple::makeGiftBasket(std::vector<Gift> giftsList, Logger *logger)
         if (! giftsList.empty())
             gifts.push_back(giftsList[0]);
         logger->log("Luxury", boy->name+" gifted luxury gift "+ gifts[0].name + " to "+ girl->name, true);
+    }
+
+    boy->setGiftBasket(&gifts);
+    girl->setGiftBasket(&gifts);
+}
+
+void Couple::makeGiftBasket2(std::vector<Gift> giftsList, Logger *logger)
+{
+    if (giftsList.empty()) return;
+
+    gifts.clear();
+
+    int expenseLimit = boy->budget;
+    /* Here the boy has to gift one gift of each type,
+     * even if it surpasses his budget
+     */
+    std::vector<Gift> essentialGifts (giftsList.size());
+    std::vector<Gift> luxuryGifts    (giftsList.size());
+    std::vector<Gift> utilityGifts   (giftsList.size());
+
+    auto it = std::copy_if (giftsList.begin(), giftsList.end(), essentialGifts.begin(), [](Gift g) { return (g.type != luxury)    && (g.type != utility);   });
+    essentialGifts.resize(std::distance(essentialGifts.begin(), it)); // resize to shrink container space
+         it = std::copy_if (giftsList.begin(), giftsList.end(), luxuryGifts.begin(),    [](Gift g) { return (g.type != essential) && (g.type != utility);   });
+    luxuryGifts.resize(std::distance(luxuryGifts.begin(), it)); // resize to shrink container space
+         it = std::copy_if (giftsList.begin(), giftsList.end(), utilityGifts.begin(),   [](Gift g) { return (g.type != luxury)    && (g.type != essential); });
+    utilityGifts.resize(std::distance(utilityGifts.begin(), it)); // resize to shrink container space
+
+    if (essentialGifts.size() == 1 || luxuryGifts.size() == 1 || utilityGifts.size() == 1) {
+        logger->log("critical", "There is one gift possible for each type", true);
+    }
+
+    /* gift one gift of each type */
+    gifts.push_back(essentialGifts[0]); gifts.push_back(luxuryGifts[0]); gifts.push_back(utilityGifts[0]);
+    logger->log("Gift", boy->name+" has money of value "+std::to_string(expenseLimit), true);
+    logger->log("Gift", boy->name+" gifted "+ essentialGifts[0].name + " & " + luxuryGifts[0].name + " & " + utilityGifts[0].name + " to "+ girl->name, true);
+    for (auto g : gifts)
+        expenseLimit -= g.price;
+
+    logger->log("Gift", boy->name+" is left with "+std::to_string(expenseLimit), true);
+
+    /* This gifting policy gifts essential gifts first, utitliy gifts next, and luxury gifts last */
+    int ess_pos = 1, lux_pos = 1, uti_pos = 1;
+    int ess_last = essentialGifts.size(), lux_last = luxuryGifts.size(), uti_last = utilityGifts.size();
+    while (expenseLimit > 0) {
+        if (ess_pos < ess_last) {
+            gifts.push_back(essentialGifts[ess_pos]);
+            expenseLimit -= essentialGifts[ess_pos].price;
+            logger->log("Gift", boy->name+" gifted "+ essentialGifts[ess_pos].name + " to "+ girl->name, true);
+            ess_pos++;
+            continue;
+        } else if (lux_pos < lux_last) {
+            gifts.push_back(luxuryGifts[lux_pos]);
+            expenseLimit -= luxuryGifts[lux_pos].price;
+            logger->log("Gift", boy->name+" gifted "+ luxuryGifts[lux_pos].name + " to "+ girl->name, true);
+            lux_pos++;
+            continue;
+        } else if (uti_pos < uti_last) {
+            gifts.push_back(utilityGifts[uti_pos]);
+            expenseLimit -= utilityGifts[uti_pos].price;
+            logger->log("Gift", boy->name+" gifted " + utilityGifts[uti_pos].name + " to "+ girl->name, true);
+            uti_pos++;
+            continue;
+        }
     }
 
     boy->setGiftBasket(&gifts);

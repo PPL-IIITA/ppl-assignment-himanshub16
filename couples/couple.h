@@ -22,6 +22,9 @@ public:
 
     /** Form the gift basket (vector) for this couple from given gift list */
     void makeGiftBasket(std::vector<Gift> giftlist, Logger *logger);
+
+    /** Form a gift basket such that it contains one gift of every type */
+    void makeGiftBasket2(std::vector<Gift> giftlist, Logger *logger);
 };
 
 
