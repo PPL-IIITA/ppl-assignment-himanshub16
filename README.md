@@ -7,6 +7,7 @@
 * [Development Environment](#development-environment)
 * [Build instructions](#build-instructions)
 * [Class diagram](#class-diagram)
+* [First submission](https://github.com/PPL-IIITA/ppl-assignment-himanshub16/tree/first-submission)
 
 ---
 ### Development Environment
