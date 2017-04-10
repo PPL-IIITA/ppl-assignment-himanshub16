@@ -33,3 +33,9 @@ clean:
 	@rm -f q2.o
 	@rm -f q3.o
 	@rm -f q4.o
+	@rm -f q5.o
+	@rm -f q6.o
+	@rm -f q7.o
+	@rm -f q8.o
+	@rm -f q9.o
+	@rm -f q10.o
