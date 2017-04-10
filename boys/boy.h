@@ -47,10 +47,14 @@ public:
     /** Check if the girl is compatible with the boy */
     bool isCompatible(Girl *girl);
 
-    /** Calculate happiness of the boy */
+    /** Calculate happiness of the boy.
+     * Abstract method
+     */
     virtual float getHappiness() = 0;
 
-    /** Get nature of boy */
+    /** Get nature of boy
+     * Abstract method
+     */
     virtual BoyNature getNature() = 0;
 };
 

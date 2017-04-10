@@ -43,6 +43,8 @@ int main(int argc, char **argv)
     return 0;
 }
 
+
+/** Perform coupling of boys and girls based on getting the k best choices at a time */
 std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*> girls, Logger *logger)
 {
     std::vector<Couple> couples;
@@ -80,6 +82,7 @@ std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*
     return couples;
 }
 
+/** Method to perform gifting to couple */
 void performGifting (int k, std::vector<Couple> *couples, std::vector<Gift> *giftlist, Logger *logger)
 {
     for (auto it = couples->begin(); it != couples->end(); it++)

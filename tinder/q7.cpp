@@ -71,7 +71,7 @@ int main(int argc, char **argv)
     return 0;
 }
 
-
+/** Returns a random list of names of boys to search against in boyslist */
 std::vector<std::string> getNamesToSearch(int size, int nBoys)
 {
     std::vector< std::string > randomNames;

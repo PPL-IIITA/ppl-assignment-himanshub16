@@ -45,6 +45,9 @@ int main(int argc, char **argv)
     return 0;
 }
 
+/** Make couples out of available boys and girls
+ * Based on random selection of boys and girls using RandomK
+ */
 std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*> girls, Logger *logger)
 {
     std::vector<Couple> couples;
@@ -84,6 +87,7 @@ std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*
     return couples;
 }
 
+/** Perform gifting to couples */
 void performGifting (int k, std::vector<Couple> *couples, std::vector<Gift> *giftlist, Logger *logger)
 {
     for (auto it = couples->begin(); it != couples->end(); it++)

@@ -12,7 +12,9 @@
 class Boy;
 class Gift;
 
-/** Class for girl */
+/** Class for girl
+ * Abstract class
+ */
 class Girl
 {
 private:
@@ -39,10 +41,14 @@ public:
     /** Set giftbasket for the girl */
     void setGiftBasket(std::vector <Gift> *gifts);
 
-    /** Find the happiness of the girl */
+    /** Find the happiness of the girl
+     * Abstract method
+     */
     virtual float getHappiness() = 0;
 
-    /** Get nature of the girl */
+    /** Get nature of the girl
+     * Abstract method
+     */
     virtual GirlNature getNature() = 0;
 
     /** Check if the girl is compatible with the boy */
