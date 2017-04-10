@@ -72,6 +72,7 @@ std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*
                 girl->isCompatible(boy)) {
 
                 couples.push_back(Couple(boy, girl));
+                logger->log("Couple", boy->name+" partenered with "+girl->name, true);
                 boy->committed = true;
                 girl->committed= true;
                 break;

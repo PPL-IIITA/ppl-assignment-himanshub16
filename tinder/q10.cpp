@@ -55,6 +55,7 @@ std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*
 
     for (int j = 0; j < girls.size(); j++) {
         auto girl = RandomK<Girl*>(girls).getRandomElem();
+        logger->info(girl->name+" was chosen at random", true);
         if (girl->committed) continue;
 
         std::vector<Boy*> topBoys;
@@ -72,11 +73,13 @@ std::vector<Couple> makeCouples(int k, std::vector<Boy*> boys, std::vector<Girl*
 
         for (int i = 0; i < topBoys.size(); i++) {
             auto boy = RandomK<Boy*>(topBoys).getRandomElem();
+            logger->info(boy->name+" was chosen at random", true);
             if (boy->committed) continue;
             if (boy->isCompatible(girl) &&
                 girl->isCompatible(boy)) {
 
                 couples.push_back(Couple(boy, girl));
+                logger->log("Couple", boy->name+" coupled with "+girl->name, true);
                 boy->committed = true;
                 girl->committed= true;
                 break;
