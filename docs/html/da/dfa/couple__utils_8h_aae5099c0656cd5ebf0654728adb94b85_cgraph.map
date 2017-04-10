@@ -1,0 +1,6 @@
+<map id="getKUnhappiestCouples" name="getKUnhappiestCouples">
+<area shape="rect" id="node2" href="$d3/db9/couple_8cpp.html#a80b281535d1896bcf491da0c9ddd1f9e" title="compareOnHappiness" alt="" coords="216,31,367,57"/>
+<area shape="rect" id="node3" href="$d9/d53/class_couple.html#afcb41d79f6017c9584082279ef9ab832" title="Couple::findHappiness" alt="" coords="415,31,569,57"/>
+<area shape="rect" id="node4" href="$dd/d66/class_boy.html#aac47564db13da6932dd15f93dbc4228e" title="Boy::getHappiness" alt="" coords="617,5,751,32"/>
+<area shape="rect" id="node5" href="$d6/da5/class_girl.html#a0b6b1af977e877695cbbb2dd74827e61" title="Girl::getHappiness" alt="" coords="619,56,749,83"/>
+</map>

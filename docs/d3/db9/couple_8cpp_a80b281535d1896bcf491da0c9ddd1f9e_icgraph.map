@@ -1,4 +1,6 @@
 <map id="compareOnHappiness" name="compareOnHappiness">
-<area shape="rect" id="node2" href="$da/dfa/couple__utils_8h.html#a9d34cfc842a41546a3ac92a81a78cb77" title="getKHappiestCouples" alt="" coords="208,5,360,32"/>
-<area shape="rect" id="node3" href="$dc/d17/q2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="408,5,459,32"/>
+<area shape="rect" id="node2" href="$da/dfa/couple__utils_8h.html#a9d34cfc842a41546a3ac92a81a78cb77" title="getKHappiestCouples" alt="" coords="211,5,360,32"/>
+<area shape="rect" id="node4" href="$da/dfa/couple__utils_8h.html#aae5099c0656cd5ebf0654728adb94b85" title="getKUnhappiestCouples" alt="" coords="204,56,367,83"/>
+<area shape="rect" id="node3" href="$dc/d17/q2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="415,5,465,32"/>
+<area shape="rect" id="node5" href="$dc/d1c/q4_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="415,56,465,83"/>
 </map>

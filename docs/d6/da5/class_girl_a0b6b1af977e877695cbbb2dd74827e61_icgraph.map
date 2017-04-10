@@ -1,0 +1,10 @@
+<map id="Girl::getHappiness" name="Girl::getHappiness">
+<area shape="rect" id="node2" href="$d9/d53/class_couple.html#afcb41d79f6017c9584082279ef9ab832" title="Couple::findHappiness" alt="" coords="201,31,356,57"/>
+<area shape="rect" id="node8" href="$dd/dc9/class_generous_boy.html#a589fac108cb64b7709f60a110c6edaf7" title="GenerousBoy::getHappiness" alt="" coords="184,81,373,108"/>
+<area shape="rect" id="node3" href="$d0/d12/couple_8h.html#a80b281535d1896bcf491da0c9ddd1f9e" title="compareOnHappiness" alt="" coords="421,31,572,57"/>
+<area shape="rect" id="node4" href="$da/dfa/couple__utils_8h.html#a9d34cfc842a41546a3ac92a81a78cb77" title="getKHappiestCouples" alt="" coords="627,5,776,32"/>
+<area shape="rect" id="node6" href="$da/dfa/couple__utils_8h.html#aae5099c0656cd5ebf0654728adb94b85" title="getKUnhappiestCouples" alt="" coords="620,56,783,83"/>
+<area shape="rect" id="node5" href="$dc/d17/q2_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="831,5,881,32"/>
+<area shape="rect" id="node7" href="$dc/d1c/q4_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="831,56,881,83"/>
+<area shape="rect" id="node9" href="$df/dac/test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="471,81,522,108"/>
+</map>

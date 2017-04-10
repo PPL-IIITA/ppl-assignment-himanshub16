@@ -1,0 +1,5 @@
+<map id="Girl" name="Girl">
+<area shape="rect" id="node2" href="$d8/def/class_choosy_girl.html" title="ChoosyGirl" alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$d9/de3/class_desperate_girl.html" title="DesperateGirl" alt="" coords="116,80,219,107"/>
+<area shape="rect" id="node4" href="$d2/dc7/class_normal_girl.html" title="NormalGirl" alt="" coords="243,80,327,107"/>
+</map>
