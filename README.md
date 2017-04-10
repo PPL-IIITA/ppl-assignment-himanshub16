@@ -21,16 +21,10 @@
 
 ---
 ### Build instructions
-**To execute Question 1**
+**To execute any question, say question 7**
 ```
-make q1
+make q7
 ./result
-```
-
-**To execute Question 2**
-```
-make q2
-./result [k]
 ```
 
 **To generate csv datasets**
@@ -48,4 +42,5 @@ Logs are available in **log.txt**
 ---
 
 ### Class diagram
-* Class diagrams are available in [documentation](https://ppl-iiita.github.io/ppl-assignment-himanshub16).
+* Available [here as pdf](https://github.com/PPL-IIITA/ppl-assignment-himanshub16/blob/master/UMLDiagram.pdf).
+* More detailed diagrams are available in the [documentation](https://ppl-iiita.github.io/ppl-assignment-himanshub16) itself.
