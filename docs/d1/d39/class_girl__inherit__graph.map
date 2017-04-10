@@ -1,5 +1,5 @@
 <map id="Girl" name="Girl">
-<area shape="rect" id="node2" href="$d8/def/class_choosy_girl.html" title="ChoosyGirl" alt="" coords="5,80,92,107"/>
-<area shape="rect" id="node3" href="$d9/de3/class_desperate_girl.html" title="DesperateGirl" alt="" coords="116,80,219,107"/>
-<area shape="rect" id="node4" href="$d2/dc7/class_normal_girl.html" title="NormalGirl" alt="" coords="243,80,327,107"/>
+<area shape="rect" id="node2" href="$d8/def/class_choosy_girl.html" title="{ChoosyGirl\n|&#45; nature\l|+ ChoosyGirl()\l+ getHappiness()\l+ getNature()\l}" alt="" coords="5,307,128,413"/>
+<area shape="rect" id="node3" href="$d9/de3/class_desperate_girl.html" title="{DesperateGirl\n|&#45; nature\l|+ DesperateGirl()\l+ getHappiness()\l+ getNature()\l}" alt="" coords="152,307,275,413"/>
+<area shape="rect" id="node4" href="$d2/dc7/class_normal_girl.html" title="{NormalGirl\n|&#45; nature\l|+ NormalGirl()\l+ getHappiness()\l+ getNature()\l}" alt="" coords="299,307,421,413"/>
 </map>

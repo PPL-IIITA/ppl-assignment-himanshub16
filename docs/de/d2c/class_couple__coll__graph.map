@@ -1,4 +1,4 @@
 <map id="Couple" name="Couple">
-<area shape="rect" id="node2" href="$dd/d66/class_boy.html" title="Boy" alt="" coords="31,5,77,32"/>
-<area shape="rect" id="node3" href="$d6/da5/class_girl.html" title="Girl" alt="" coords="61,95,103,121"/>
+<area shape="rect" id="node2" href="$dd/d66/class_boy.html" title="{Boy\n|+ name\l+ attr\l+ intel\l+ budget\l+ min_attr_req\l+ happiness\l+ committed\l+ gifts\l|+ makeCouple()\l+ setGiftBasket()\l+ isCompatible()\l+ getHappiness()\l+ getNature()\l}" alt="" coords="19,5,142,244"/>
+<area shape="rect" id="node3" href="$d6/da5/class_girl.html" title="{Girl\n|+ committed\l+ name\l+ attr\l+ intel\l+ budget\l+ happiness\l+ boy_type\l+ gifts\l|+ makeCouple()\l+ setGiftBasket()\l+ getHappiness()\l+ getNature()\l+ isCompatible()\l}" alt="" coords="94,307,217,545"/>
 </map>

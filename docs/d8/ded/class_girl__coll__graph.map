@@ -1,3 +1,3 @@
 <map id="Girl" name="Girl">
-<area shape="rect" id="node2" href="$dd/d66/class_boy.html" title="Boy" alt="" coords="31,95,78,121"/>
+<area shape="rect" id="node2" href="$dd/d66/class_boy.html" title="{Boy\n|+ name\l+ attr\l+ intel\l+ budget\l+ min_attr_req\l+ happiness\l+ committed\l+ gifts\l|+ makeCouple()\l+ setGiftBasket()\l+ isCompatible()\l+ getHappiness()\l+ getNature()\l}" alt="" coords="5,307,128,545"/>
 </map>

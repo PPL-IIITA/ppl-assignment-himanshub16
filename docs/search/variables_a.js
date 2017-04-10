@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value',['value',['../d0/dbd/class_gift.html#a71d14b92ebfd06993afe584f088bc748',1,'Gift']]]
+  ['price',['price',['../d0/dbd/class_gift.html#ad795362f286e8d5d73514fb64ac478b8',1,'Gift']]]
 ];

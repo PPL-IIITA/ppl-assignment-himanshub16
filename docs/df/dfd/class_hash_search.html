@@ -107,6 +107,8 @@ $(document).ready(function(){initNavTree('df/dfd/class_hash_search.html','../../
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d9/dd2/class_hash_search-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">HashSearch Class Reference</div>  </div>
@@ -119,17 +121,17 @@ Inheritance diagram for HashSearch:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/d05/class_hash_search__inherit__graph.png" border="0" usemap="#_hash_search_inherit__map" alt="Inheritance graph"/></div>
 <map name="_hash_search_inherit__map" id="_hash_search_inherit__map">
-<area shape="rect" id="node2" href="../../d5/d7f/class_search.html" title="Search" alt="" coords="21,5,84,32"/>
+<area shape="rect" id="node2" href="../../d5/d7f/class_search.html" title="{Search\n|# boyslist\l|+ findGirlfriends()\l}" alt="" coords="11,5,133,83"/>
 </map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+</div>
 <div class="dynheader">
 Collaboration diagram for HashSearch:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d5f/class_hash_search__coll__graph.png" border="0" usemap="#_hash_search_coll__map" alt="Collaboration graph"/></div>
 <map name="_hash_search_coll__map" id="_hash_search_coll__map">
-<area shape="rect" id="node2" href="../../d5/d7f/class_search.html" title="Search" alt="" coords="21,5,84,32"/>
+<area shape="rect" id="node2" href="../../d5/d7f/class_search.html" title="{Search\n|# boyslist\l|+ findGirlfriends()\l}" alt="" coords="11,5,133,83"/>
 </map>
-<center><span class="legend">[<a target="top" href="../../graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -137,6 +139,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a954c917906fc8b752cf7d441f34fca54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5781d40ef6ca216f6877ed1703788332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfd/class_hash_search.html#a5781d40ef6ca216f6877ed1703788332">findGirlfriends</a> (std::vector&lt; std::string &gt; namelist, <a class="el" href="../../d3/d42/class_logger.html">Logger</a> *logger) override</td></tr>
 <tr class="separator:a5781d40ef6ca216f6877ed1703788332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3ca1e825a75d6f0b595882b80ade195e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfd/class_hash_search.html#a3ca1e825a75d6f0b595882b80ade195e">makeHashTable</a> ()</td></tr>
+<tr class="separator:a3ca1e825a75d6f0b595882b80ade195e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1422db74f6b7bda46f4323bb6ceb3b11"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="../../dd/d66/class_boy.html">Boy</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfd/class_hash_search.html#a1422db74f6b7bda46f4323bb6ceb3b11">hashTable</a></td></tr>
+<tr class="separator:a1422db74f6b7bda46f4323bb6ceb3b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -210,10 +222,71 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../df/dfd/class_hash_search_a5781d40ef6ca216f6877ed1703788332_cgraph.png" border="0" usemap="#df/dfd/class_hash_search_a5781d40ef6ca216f6877ed1703788332_cgraph" alt=""/></div>
 <map name="df/dfd/class_hash_search_a5781d40ef6ca216f6877ed1703788332_cgraph" id="df/dfd/class_hash_search_a5781d40ef6ca216f6877ed1703788332_cgraph">
-<area shape="rect" id="node2" href="../../d3/d42/class_logger.html#a8edce552783b0272d7bb9ab4d2497de9" title="Logger::log" alt="" coords="236,5,323,32"/>
+<area shape="rect" id="node2" href="../../df/dfd/class_hash_search.html#a3ca1e825a75d6f0b595882b80ade195e" title="HashSearch::makeHashTable" alt="" coords="236,5,433,32"/>
+<area shape="rect" id="node3" href="../../d3/d42/class_logger.html#a8edce552783b0272d7bb9ab4d2497de9" title="Logger::log" alt="" coords="291,56,378,83"/>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ca1e825a75d6f0b595882b80ade195e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HashSearch::makeHashTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function which makes the hash table </p>
+
+<p>Definition at line <a class="el" href="../../d1/df3/hash__search_8cpp_source.html#l00003">3</a> of file <a class="el" href="../../d1/df3/hash__search_8cpp_source.html">hash_search.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../df/dfd/class_hash_search_a3ca1e825a75d6f0b595882b80ade195e_icgraph.png" border="0" usemap="#df/dfd/class_hash_search_a3ca1e825a75d6f0b595882b80ade195e_icgraph" alt=""/></div>
+<map name="df/dfd/class_hash_search_a3ca1e825a75d6f0b595882b80ade195e_icgraph" id="df/dfd/class_hash_search_a3ca1e825a75d6f0b595882b80ade195e_icgraph">
+<area shape="rect" id="node2" href="../../df/dfd/class_hash_search.html#a5781d40ef6ca216f6877ed1703788332" title="HashSearch::findGirlfriends" alt="" coords="251,5,433,32"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a1422db74f6b7bda46f4323bb6ceb3b11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="../../dd/d66/class_boy.html">Boy</a>*&gt; HashSearch::hashTable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Hashtable for lookups </p>
+
+<p>Definition at line <a class="el" href="../../d9/d82/hash__search_8h_source.html#l00012">12</a> of file <a class="el" href="../../d9/d82/hash__search_8h_source.html">hash_search.h</a>.</p>
 
 </div>
 </div>

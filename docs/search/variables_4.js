@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['happiness',['happiness',['../dd/d66/class_boy.html#ad6717442b5445fa9150ad8bbbe3ab576',1,'Boy::happiness()'],['../d9/d53/class_couple.html#a4a874566f44bc9279c650b975799553a',1,'Couple::happiness()'],['../d6/da5/class_girl.html#afb065341710eba1594db32472d8015f8',1,'Girl::happiness()']]]
+  ['fields',['fields',['../da/ddf/class_c_s_v_creator.html#a59ad989f8b67a42da368f7648074c271',1,'CSVCreator']]],
+  ['file',['file',['../d3/d42/class_logger.html#a464c446d544e860eb628799b6458964c',1,'Logger']]],
+  ['filename',['filename',['../da/ddf/class_c_s_v_creator.html#a708ab1ceb33840087fb3aa3547de93c0',1,'CSVCreator']]]
 ];

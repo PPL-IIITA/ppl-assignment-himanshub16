@@ -1,5 +1,7 @@
 <map id="makeCouples" name="makeCouples">
-<area shape="rect" id="node2" href="$d2/d9e/boy_8cpp.html#a5e19548158cae178a3234e95fa1ca6c2" title="compareOnAttractiveness" alt="" coords="156,5,329,32"/>
-<area shape="rect" id="node3" href="$d2/d9e/boy_8cpp.html#affef9f1fca4a807fd42456ee9ecb9342" title="compareOnRichness" alt="" coords="171,56,315,83"/>
-<area shape="rect" id="node4" href="$d2/d9e/boy_8cpp.html#a91e8ee7c8af6b6a198e9870f7daafa00" title="compareOnIntelligence" alt="" coords="165,107,320,133"/>
+<area shape="rect" id="node2" href="$d3/d42/class_logger.html#a33012114be492f6f29e8d4e625d50b42" title="Logger::info" alt="" coords="197,5,288,32"/>
+<area shape="rect" id="node3" href="$d2/d9e/boy_8cpp.html#a5e19548158cae178a3234e95fa1ca6c2" title="compareOnAttractiveness" alt="" coords="156,56,329,83"/>
+<area shape="rect" id="node4" href="$d2/d9e/boy_8cpp.html#affef9f1fca4a807fd42456ee9ecb9342" title="compareOnRichness" alt="" coords="171,107,315,133"/>
+<area shape="rect" id="node5" href="$d2/d9e/boy_8cpp.html#a91e8ee7c8af6b6a198e9870f7daafa00" title="compareOnIntelligence" alt="" coords="165,157,320,184"/>
+<area shape="rect" id="node6" href="$d3/d42/class_logger.html#a8edce552783b0272d7bb9ab4d2497de9" title="Logger::log" alt="" coords="199,208,286,235"/>
 </map>

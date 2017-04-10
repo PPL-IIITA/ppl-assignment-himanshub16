@@ -6,5 +6,6 @@ var searchData=
   ['makecouplesalternatively',['makeCouplesAlternatively',['../da/dfa/couple__utils_8h.html#a6894f48242ffb24502b716324addde15',1,'couple_utils.h']]],
   ['makegiftbasket',['makeGiftBasket',['../d9/d53/class_couple.html#a7a80c10d5e3e9fd3f655b7b359d110d8',1,'Couple']]],
   ['makegiftbasket2',['makeGiftBasket2',['../d9/d53/class_couple.html#a690bda7634337511fcd13b77dcec86ed',1,'Couple']]],
+  ['makehashtable',['makeHashTable',['../df/dfd/class_hash_search.html#a3ca1e825a75d6f0b595882b80ade195e',1,'HashSearch']]],
   ['miserboy',['MiserBoy',['../d2/dd9/class_miser_boy.html#aa34a09ace6029de56fff47c2a0a7c9c5',1,'MiserBoy']]]
 ];

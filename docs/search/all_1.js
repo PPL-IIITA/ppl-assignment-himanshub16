@@ -3,7 +3,7 @@ var searchData=
   ['base',['BASE',['../da/def/desperategirl_8cpp.html#a79bcfb6bde984f42d1124b068a509af7',1,'BASE():&#160;desperategirl.cpp'],['../d1/daf/girl_8cpp.html#a79bcfb6bde984f42d1124b068a509af7',1,'BASE():&#160;girl.cpp'],['../da/d5d/normalgirl_8cpp.html#a79bcfb6bde984f42d1124b068a509af7',1,'BASE():&#160;normalgirl.cpp']]],
   ['binary_5fsearch_2ecpp',['binary_search.cpp',['../df/dd5/binary__search_8cpp.html',1,'']]],
   ['binary_5fsearch_2eh',['binary_search.h',['../d8/d1e/binary__search_8h.html',1,'']]],
-  ['binarysearch',['BinarySearch',['../de/d18/class_binary_search.html',1,'BinarySearch'],['../de/d18/class_binary_search.html#a2fb3c59db6400478f507493bd641bd69',1,'BinarySearch::BinarySearch()']]],
+  ['binarysearch',['BinarySearch',['../de/d18/class_binary_search.html',1,'BinarySearch'],['../de/d18/class_binary_search.html#a9fa0044fd8d41d7ae6aefae1a1ffb03e',1,'BinarySearch::binarySearch(std::vector&lt; Boy * &gt; boys, int start, int end, std::string name)'],['../de/d18/class_binary_search.html#a2fb3c59db6400478f507493bd641bd69',1,'BinarySearch::BinarySearch(std::vector&lt; Boy * &gt; boylist)']]],
   ['boy',['Boy',['../dd/d66/class_boy.html',1,'Boy'],['../d9/d53/class_couple.html#a4038709650b76cf33261a924e881e1a7',1,'Couple::boy()']]],
   ['boy_2ecpp',['boy.cpp',['../d2/d9e/boy_8cpp.html',1,'']]],
   ['boy_2eh',['boy.h',['../d5/db9/boy_8h.html',1,'']]],

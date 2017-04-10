@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['t',['T',['../d7/da8/configs_8h.html#a13f4c79df8afb02ae1f874bc509cd50b',1,'configs.h']]],
-  ['type',['type',['../d0/dbd/class_gift.html#af7ced181816eebee03ccb02fab82ab8e',1,'Gift']]]
+  ['name',['name',['../dd/d66/class_boy.html#add25b67f2c3dcd2804289d6aca0db1bc',1,'Boy::name()'],['../d0/dbd/class_gift.html#ad013b7f19deecbc29149b13042264576',1,'Gift::name()'],['../d6/da5/class_girl.html#a669015e51c1655dcaa1071787db8eb87',1,'Girl::name()']]],
+  ['nature',['nature',['../db/dda/class_geek_boy.html#a63ff3c6834d600758517879fdb9246b0',1,'GeekBoy::nature()'],['../dd/dc9/class_generous_boy.html#ad336ecf84d55acaa9d96237562f2535e',1,'GenerousBoy::nature()'],['../d2/dd9/class_miser_boy.html#acb68f1c632d75041d4a566de61e6bbb9',1,'MiserBoy::nature()'],['../d8/def/class_choosy_girl.html#a6394da74e3833d34c33537b4bf9ce2bb',1,'ChoosyGirl::nature()'],['../d9/de3/class_desperate_girl.html#a0685850563df5a4157edc007882c7580',1,'DesperateGirl::nature()'],['../d2/dc7/class_normal_girl.html#a9554893f0c9bdc04793d2d614376bc01',1,'NormalGirl::nature()']]]
 ];

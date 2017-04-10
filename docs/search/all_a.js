@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['linearsearch',['linearSearch',['../dd/dab/class_array_search.html#a1ff7a19d42749bc2a15b22822a7474e3',1,'ArraySearch']]],
   ['log',['log',['../d3/d42/class_logger.html#a8edce552783b0272d7bb9ab4d2497de9',1,'Logger']]],
   ['log_5ffile',['LOG_FILE',['../d7/da8/configs_8h.html#a69d4676733f5e850f451942b6d901382',1,'configs.h']]],
   ['logger',['Logger',['../d3/d42/class_logger.html',1,'Logger'],['../d3/d42/class_logger.html#a5f9c8ff3ce439494283ae62dc7a9d86e',1,'Logger::Logger()']]],

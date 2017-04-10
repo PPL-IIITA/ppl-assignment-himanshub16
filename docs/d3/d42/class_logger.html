@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('d3/d42/class_logger.html','../../');})
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="../../d8/d68/class_logger-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Logger Class Reference</div>  </div>
@@ -114,6 +115,13 @@ $(document).ready(function(){initNavTree('d3/d42/class_logger.html','../../');})
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Logger:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d85/class_logger__coll__graph.png" border="0" usemap="#_logger_coll__map" alt="Collaboration graph"/></div>
+<map name="_logger_coll__map" id="_logger_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -125,6 +133,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8edce552783b0272d7bb9ab4d2497de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb668a9e186a25fbaad2e4af6d1ed00a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d42/class_logger.html#acb668a9e186a25fbaad2e4af6d1ed00a">~Logger</a> ()</td></tr>
 <tr class="separator:acb668a9e186a25fbaad2e4af6d1ed00a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a71b4c66716243ddb53175e2ce05ea412"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d42/class_logger.html#a71b4c66716243ddb53175e2ce05ea412">rawtime</a></td></tr>
+<tr class="separator:a71b4c66716243ddb53175e2ce05ea412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affcf84075781ce577a4499ebf91f5fb3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d42/class_logger.html#affcf84075781ce577a4499ebf91f5fb3">tmpstr</a></td></tr>
+<tr class="separator:affcf84075781ce577a4499ebf91f5fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464c446d544e860eb628799b6458964c"><td class="memItemLeft" align="right" valign="top">std::fstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d42/class_logger.html#a464c446d544e860eb628799b6458964c">file</a></td></tr>
+<tr class="separator:a464c446d544e860eb628799b6458964c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>&lt; Class for logger </p>
@@ -203,7 +220,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="../../d3/d42/class_logger_a33012114be492f6f29e8d4e625d50b42_icgraph.png" border="0" usemap="#d3/d42/class_logger_a33012114be492f6f29e8d4e625d50b42_icgraph" alt=""/></div>
 <map name="d3/d42/class_logger_a33012114be492f6f29e8d4e625d50b42_icgraph" id="d3/d42/class_logger_a33012114be492f6f29e8d4e625d50b42_icgraph">
 <area shape="rect" id="node2" href="../../dd/dab/class_array_search.html#a1812e3c92504c019cfe314f7ec58df6d" title="ArraySearch::findGirlfriends" alt="" coords="144,5,327,32"/>
-<area shape="rect" id="node3" href="../../d4/dab/q1_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="210,56,261,83"/>
+<area shape="rect" id="node3" href="../../d4/dab/q1_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="375,81,425,108"/>
+<area shape="rect" id="node4" href="../../d7/d14/q10_8cpp.html#a80b33324add652502a594d2564987013" title="makeCouples" alt="" coords="184,107,287,133"/>
 </map>
 </div>
 </p>
@@ -265,6 +283,76 @@ Here is the caller graph for this function:</div>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a464c446d544e860eb628799b6458964c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::fstream Logger::file</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>File stream to the log file </p>
+
+<p>Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00013">13</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71b4c66716243ddb53175e2ce05ea412"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t Logger::rawtime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Helper variable for time manipulation </p>
+
+<p>Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00011">11</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="affcf84075781ce577a4499ebf91f5fb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Logger::tmpstr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Helper variable for string manipulation </p>
+
+<p>Definition at line <a class="el" href="../../d1/d8c/logger_8h_source.html#l00012">12</a> of file <a class="el" href="../../d1/d8c/logger_8h_source.html">logger.h</a>.</p>
 
 </div>
 </div>
